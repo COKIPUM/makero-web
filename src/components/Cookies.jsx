@@ -27,7 +27,7 @@ export default function Cookies() {
           },
           {
             title: '5. Más información',
-            content: `Para cualquier consulta sobre el uso de cookies en este sitio web, puedes contactarnos en makero3d@gmail.com.`,
+            content: `Para cualquier consulta sobre el uso de cookies en este sitio web, puedes contactarnos en info@makero.es.`,
           },
         ].map(s => (
           <div key={s.title} style={{ marginBottom: 40 }}>

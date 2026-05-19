@@ -11,7 +11,7 @@ export default function Privacidad() {
         {[
           {
             title: '1. Responsable del tratamiento',
-            content: `MAKERO, con domicilio en Cabra, Córdoba, España. Email: makero3d@gmail.com. Teléfono: +34 608 920 445.`,
+            content: `MAKERO, con domicilio en Cabra, Córdoba, España. Email: info@makero.es. Teléfono: +34 608 920 445.`,
           },
           {
             title: '2. Datos que recopilamos',
@@ -35,7 +35,7 @@ export default function Privacidad() {
           },
           {
             title: '7. Tus derechos',
-            content: `Tienes derecho a acceder, rectificar, suprimir, limitar u oponerte al tratamiento de tus datos, así como a la portabilidad de los mismos. Puedes ejercerlos escribiendo a makero3d@gmail.com. Si consideras que tus derechos no se han atendido correctamente, puedes reclamar ante la Agencia Española de Protección de Datos (www.aepd.es).`,
+            content: `Tienes derecho a acceder, rectificar, suprimir, limitar u oponerte al tratamiento de tus datos, así como a la portabilidad de los mismos. Puedes ejercerlos escribiendo a info@makero.es. Si consideras que tus derechos no se han atendido correctamente, puedes reclamar ante la Agencia Española de Protección de Datos (www.aepd.es).`,
           },
         ].map(s => (
           <div key={s.title} style={{ marginBottom: 40 }}>

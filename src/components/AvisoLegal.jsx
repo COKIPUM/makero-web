@@ -11,7 +11,7 @@ export default function AvisoLegal() {
         {[
           {
             title: '1. Datos identificativos',
-            content: `En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico, se informa que el titular de este sitio web es MAKERO, con domicilio en Cabra, Córdoba, España. Contacto: makero3d@gmail.com · Teléfono: +34 608 920 445.`,
+            content: `En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico, se informa que el titular de este sitio web es MAKERO, con domicilio en Cabra, Córdoba, España. Contacto: info@makero.es · Teléfono: +34 608 920 445.`,
           },
           {
             title: '2. Objeto y ámbito de aplicación',
