@@ -455,7 +455,7 @@ body {
   .nav-links, .nav-cta { display:none; }
   .nav-hamburger { display:block; }
   .hero-content { grid-template-columns:1fr; }
-  .hero-visual { display:none; }
+  .hero-3d-scene { max-width: clamp(260px, 80vw, 360px); }
   .hero-stats { gap: clamp(16px,4vw,28px); }
   .about-inner, .contact-grid { grid-template-columns:1fr; }
   .gallery-grid { grid-template-columns:1fr 1fr; grid-template-rows:auto; }
