@@ -5,7 +5,7 @@ const items = [
   { id: 2, bg: galleryBg2, isImg: false, label: 'Productos de empresa', name: 'Llaveros personalizados',        pos: 'center 75%' },
   { id: 3, bg: galleryBg3, isImg: false, label: 'Deco infantil',        name: 'Letra IMAGINE',                 pos: 'center 60%' },
   { id: 5, bg: galleryBg5, isImg: false, label: 'Regalos para bebés',   name: 'Letra + Animal personalizado',  pos: 'center 70%' },
-  { id: 4, bg: galleryBg4, isImg: false, label: 'Eventos',              name: 'Premios',                       pos: 'center center', size: '60%' },
+  { id: 4, bg: galleryBg4, isImg: false, label: 'Eventos',              name: 'Premios',                       pos: 'center center' },
   { id: 6, bg: galleryBg6, isImg: false, label: 'Corporativo',          name: 'Logo de empresa',               pos: 'center center' },
 ]
 
