@@ -223,7 +223,7 @@ body {
 ───────────────────────────────────────── */
 .services-grid {
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: clamp(14px, 2vw, 24px);
 }
 .service-card {
@@ -448,6 +448,7 @@ body {
   .footer-inner { grid-template-columns:1fr 1fr; }
   .how-steps { grid-template-columns:repeat(2,1fr); }
   .how-steps::before { display:none; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* Tablet portrait */
@@ -477,6 +478,7 @@ body {
   }
   .how-steps { grid-template-columns:1fr; }
   .how-steps::before { display:none; }
+  .services-grid { grid-template-columns: 1fr; }
 }
 
 /* 2K / 4K / Ultrawide — prevent over-stretching */
