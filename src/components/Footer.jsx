@@ -34,20 +34,32 @@ export default function Footer() {
           </div>
 
           {/* Links */}
-          {[
-            { heading: 'Servicios', links: ['Impresión personalizada', 'Regalos exclusivos', 'Eventos', 'Trofeos', 'Proyectos a medida'] },
-            { heading: 'Empresa',  links: ['Quiénes somos', 'Proyectos', 'Blog', 'Contacto'] },
-            { heading: 'Legal',    links: ['Aviso legal', 'Privacidad', 'Cookies'] },
-          ].map(col => (
-            <div key={col.heading}>
-              <h4 className="footer-heading">{col.heading}</h4>
-              <ul className="footer-links">
-                {col.links.map(l => (
-                  <li key={l}><a href="#contacto">{l}</a></li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div>
+            <h4 className="footer-heading">Servicios</h4>
+            <ul className="footer-links">
+              <li><a href="#servicios">Impresión personalizada</a></li>
+              <li><a href="#servicios">Regalos exclusivos</a></li>
+              <li><a href="#servicios">Eventos</a></li>
+              <li><a href="#servicios">Trofeos</a></li>
+              <li><a href="#servicios">Proyectos a medida</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="footer-heading">Empresa</h4>
+            <ul className="footer-links">
+              <li><a href="#nosotros">Quiénes somos</a></li>
+              <li><a href="#proyectos">Proyectos</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="footer-heading">Legal</h4>
+            <ul className="footer-links">
+              <li><a href="/aviso-legal">Aviso legal</a></li>
+              <li><a href="/privacidad">Privacidad</a></li>
+              <li><a href="/cookies">Cookies</a></li>
+            </ul>
+          </div>
         </div>
 
         <div className="footer-bottom">
