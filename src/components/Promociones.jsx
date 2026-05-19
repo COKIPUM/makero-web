@@ -26,7 +26,7 @@ export default function Promociones() {
             <div className="promo-discount" style={{ color: 'var(--yellow)' }}>15%</div>
             <div className="promo-discount-label">en pedidos de 3 o más piezas</div>
             <h3 className="promo-title">Pack múltiple</h3>
-            <p className="promo-desc">¿Necesitas varias piezas? Cuantas más, más ahorras. Ideal para eventos, equipos o regalos a grupo.</p>
+            <p className="promo-desc">¿Necesitas varias piezas? Cuantas más pidas, mayor es el ahorro. Ideal para eventos, equipos o regalos a grupo.</p>
             <a href="#contacto" className="btn" style={{ background: 'var(--yellow)', color: '#0F1115', border: 'none', boxShadow: '0 0 30px rgba(233,173,73,0.3)' }}>
               Solicitar presupuesto
             </a>
