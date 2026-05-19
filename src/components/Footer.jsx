@@ -35,13 +35,13 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="footer-heading">Servicios</h4>
+            <h4 className="footer-heading">Makero</h4>
             <ul className="footer-links">
-              <li><a href="#servicios">Impresión personalizada</a></li>
-              <li><a href="#servicios">Regalos exclusivos</a></li>
-              <li><a href="#servicios">Eventos</a></li>
-              <li><a href="#servicios">Trofeos</a></li>
-              <li><a href="#servicios">Proyectos a medida</a></li>
+              <li><a href="#servicios">Servicios creativos</a></li>
+              <li><a href="#promociones">Descuentos</a></li>
+              <li><a href="#como-funciona">Procesos</a></li>
+              <li><a href="#testimonials">Clientes</a></li>
+              <li><a href="#redes">Redes sociales</a></li>
             </ul>
           </div>
           <div>
