@@ -160,15 +160,15 @@ body {
   overflow:hidden; position:relative;
 }
 .hero-tag {
-  position:absolute; background:rgba(15,17,21,0.85);
+  position:absolute; background:rgba(15,17,21,0.9);
   backdrop-filter:blur(12px); border:1px solid var(--border);
-  border-radius:999px; padding:8px 16px; font-size:13px; font-weight:500;
-  display:flex; align-items:center; gap:8px; white-space:nowrap;
+  border-radius:999px; padding:10px 20px; font-size:14px; font-weight:600;
+  display:flex; align-items:center; gap:10px; white-space:nowrap;
 }
-.hero-tag-1 { top:16px; left:-20px; }
-.hero-tag-2 { bottom:100px; left:-30px; }
-.hero-tag-3 { top:40%; right:-20px; }
-.tag-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+.hero-tag-1 { top:12px; left:-36px; }
+.hero-tag-2 { bottom:90px; left:-44px; }
+.hero-tag-3 { top:40%; right:-36px; }
+.tag-dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
 .dot-yellow { background:var(--yellow); box-shadow:0 0 8px var(--yellow); }
 .dot-green  { background:#4ce880; box-shadow:0 0 8px #4ce880; }
 .dot-orange { background:var(--orange); box-shadow:0 0 8px var(--orange); }

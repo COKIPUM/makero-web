@@ -69,12 +69,12 @@ export default function Hero() {
                 </div>
               </div>
               <div className="hero-tag hero-tag-1">
-                <span className="tag-dot dot-yellow" />
                 <span>100% personalizado</span>
+                <span className="tag-dot dot-yellow" />
               </div>
               <div className="hero-tag hero-tag-2">
-                <span className="tag-dot dot-green" />
                 <span>Material ecológico</span>
+                <span className="tag-dot dot-green" />
               </div>
               <div className="hero-tag hero-tag-3">
                 <span className="tag-dot dot-orange" />
