@@ -17,13 +17,13 @@ const reviews = [
     text: '"Necesitaba un prototipo funcional en tiempo récord. Makero lo entregó en 48h con una precisión milimétrica. Servicio profesional y precio justo. Volvería sin dudar."',
   },
   {
-    img: testimonial4, alt: 'Ana García', pos: 'center 60%',
+    img: testimonial5, alt: 'Ana García', pos: 'center 60%',
     name: 'Ana García', role: 'Profesora · Granada',
     text: '"Encargué letras decorativas personalizadas para el cuarto de mi hija y quedaron preciosas. El proceso fue súper fácil y rápido. Totalmente recomendable."',
   },
   {
-    img: testimonial5, alt: 'Javier Ruiz', pos: 'center 60%',
-    name: 'Javier Ruiz', role: 'Empresario · Málaga',
+    img: testimonial4, alt: 'María Quero', pos: 'center 60%',
+    name: 'María Quero', role: 'Empresaria · Málaga',
     text: '"Mandé hacer trofeos personalizados para nuestra empresa y el resultado fue impresionante. Todos los empleados quedaron encantados. Calidad y profesionalidad al máximo."',
   },
 ]

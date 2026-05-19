@@ -26,7 +26,7 @@ export default function Galeria() {
                   <img
                     src={item.bg}
                     alt={item.name}
-                    style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center', background: '#1a1e28', display: 'block', borderRadius: 16 }}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', background: '#1a1e28', display: 'block', borderRadius: 16 }}
                   />
                 </div>
               ) : (
