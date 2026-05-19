@@ -34,7 +34,6 @@ export default function Navbar() {
             </a>
             <button
               onClick={() => setOpen(o => !o)}
-              style={{ display: 'none', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text)', padding: 4 }}
               className="nav-hamburger"
               aria-label="Menú"
             >

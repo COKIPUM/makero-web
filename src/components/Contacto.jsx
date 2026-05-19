@@ -55,7 +55,7 @@ export default function Contacto() {
             </div>
           ) : (
             <form className="contact-form" onSubmit={submit}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16 }}>
                 <div className="form-group">
                   <label className="form-label">Nombre *</label>
                   <input name="name" className="form-input" required value={form.name} onChange={handle} placeholder="Tu nombre" />
