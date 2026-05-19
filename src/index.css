@@ -195,8 +195,9 @@ body {
   border-top:1px solid var(--border);
   flex-wrap: wrap;
 }
-.stat-number { font-family:'Sora',sans-serif; font-size: var(--text-2xl); font-weight:700; letter-spacing:-1px; }
-.stat-label  { font-size: var(--text-xs); color:var(--text-muted); margin-top:2px; font-weight:700; }
+.stat-item { display:flex; flex-direction:column; align-items:center; }
+.stat-number { font-family:'Sora',sans-serif; font-size: var(--text-2xl); font-weight:700; letter-spacing:-1px; text-align:center; }
+.stat-label  { font-size: var(--text-xs); color:var(--text-muted); margin-top:2px; font-weight:700; text-align:center; }
 
 /* Hero visual */
 .hero-visual { display:flex; justify-content:center; align-items:center; }
