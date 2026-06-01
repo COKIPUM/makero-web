@@ -53,7 +53,7 @@ export default function ProductCard({ producto, moneda, colorPrimario }) {
         <h3 style={{ fontFamily: 'Sora, sans-serif', fontSize: 'clamp(13px,1.2vw,15px)', fontWeight: 700, color: '#F0F2F5', lineHeight: 1.3 }}>
           {producto.nombre}
         </h3>
-        <span style={{ fontFamily: 'Sora, sans-serif', fontSize: 'clamp(14px,1.3vw,16px)', fontWeight: 800, color: colorPrimario, whiteSpace: 'nowrap', flexShrink: 0 }}>
+        <span style={{ fontFamily: 'Sora, sans-serif', fontSize: 'clamp(15px,1.5vw,18px)', fontWeight: 800, color: colorPrimario, whiteSpace: 'nowrap', flexShrink: 0 }}>
           {producto.precio.toFixed(2)}{moneda}
         </span>
       </div>
@@ -69,11 +69,11 @@ export default function ProductCard({ producto, moneda, colorPrimario }) {
           {producto.alergenos.map(a => (
             ALERGENOS[a] && (
               <span key={a} title={ALERGENOS[a].label} style={{
-                fontSize: 'clamp(10px,0.9vw,12px)',
-                background: 'rgba(255,255,255,0.06)',
-                border: '1px solid rgba(255,255,255,0.1)',
-                borderRadius: 6, padding: '2px 7px', color: '#9CA3AF',
-                display: 'flex', alignItems: 'center', gap: 3,
+                fontSize: 'clamp(9px,0.8vw,10px)',
+                background: 'rgba(255,255,255,0.04)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                borderRadius: 5, padding: '1px 6px', color: '#6B7280',
+                display: 'flex', alignItems: 'center', gap: 2,
               }}>
                 {ALERGENOS[a].emoji} {ALERGENOS[a].label}
               </span>
