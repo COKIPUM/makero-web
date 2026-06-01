@@ -49,7 +49,7 @@ export default async function handler(req) {
   <meta property="og:image:width" content="720" />
   <meta property="og:image:height" content="720" />
   <meta property="og:locale" content="es_ES" />
-  <meta property="og:site_name" content="${meta.title}" />
+  <meta property="og:site_name" content="CARTA DIGITAL" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${meta.title}" />
   <meta name="twitter:description" content="${meta.description}" />
