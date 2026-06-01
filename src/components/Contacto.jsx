@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import emailjs from '@emailjs/browser'
+
 
 const SERVICE_ID  = 'service_bzi2jjf'
 const TEMPLATE_ID = 'template_m1c4vpq'
@@ -84,6 +84,7 @@ export default function Contacto() {
     if (!emailOk) { setStatus('error'); return }
 
     try {
+      const emailjs = await import('@emailjs/browser')
       await emailjs.send(SERVICE_ID, TEMPLATE_ID, clean, PUBLIC_KEY)
       lastSubmit = Date.now()
       setStatus('sent')
