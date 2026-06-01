@@ -1,0 +1,179 @@
+{
+  "slug": "restaurante-demo",
+  "nombre": "El Rincón de Cabra",
+  "descripcion": "Cocina tradicional andaluza con el sabor de siempre",
+  "logo": "",
+  "color_primario": "#EA7A47",
+  "color_secundario": "#E9AD49",
+  "telefono": "+34 957 000 000",
+  "direccion": "Calle Mayor 1, Cabra, Córdoba",
+  "horario": "13:00 - 16:00 · 20:00 - 23:30",
+  "moneda": "€",
+  "categorias": [
+    {
+      "id": "entrantes",
+      "nombre": "Entrantes",
+      "emoji": "🥗",
+      "productos": [
+        {
+          "id": "e1",
+          "nombre": "Salmorejo cordobés",
+          "descripcion": "Receta tradicional con jamón ibérico y huevo duro",
+          "precio": 5.50,
+          "imagen": "",
+          "alergenos": ["gluten", "huevo"],
+          "destacado": true,
+          "disponible": true
+        },
+        {
+          "id": "e2",
+          "nombre": "Berenjenas con miel",
+          "descripcion": "Berenjenas fritas crujientes con miel de caña",
+          "precio": 7.00,
+          "imagen": "",
+          "alergenos": ["gluten"],
+          "destacado": false,
+          "disponible": true
+        },
+        {
+          "id": "e3",
+          "nombre": "Tabla de ibéricos",
+          "descripcion": "Selección de embutidos ibéricos de la comarca",
+          "precio": 14.00,
+          "imagen": "",
+          "alergenos": [],
+          "destacado": true,
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "carnes",
+      "nombre": "Carnes",
+      "emoji": "🥩",
+      "productos": [
+        {
+          "id": "c1",
+          "nombre": "Rabo de toro estofado",
+          "descripcion": "Cocido a fuego lento durante 6 horas con verduras de temporada",
+          "precio": 18.50,
+          "imagen": "",
+          "alergenos": ["apio"],
+          "destacado": true,
+          "disponible": true
+        },
+        {
+          "id": "c2",
+          "nombre": "Flamenquín cordobés",
+          "descripcion": "Filete de cerdo relleno de jamón, rebozado y frito",
+          "precio": 13.00,
+          "imagen": "",
+          "alergenos": ["gluten", "huevo"],
+          "destacado": false,
+          "disponible": true
+        },
+        {
+          "id": "c3",
+          "nombre": "Secreto ibérico a la brasa",
+          "descripcion": "Con guarnición de patatas y pimientos asados",
+          "precio": 19.00,
+          "imagen": "",
+          "alergenos": [],
+          "destacado": false,
+          "disponible": false
+        }
+      ]
+    },
+    {
+      "id": "pescados",
+      "nombre": "Pescados",
+      "emoji": "🐟",
+      "productos": [
+        {
+          "id": "p1",
+          "nombre": "Bacalao con tomate",
+          "descripcion": "Bacalao desalado en salsa de tomate casera con pimientos",
+          "precio": 16.00,
+          "imagen": "",
+          "alergenos": ["pescado"],
+          "destacado": false,
+          "disponible": true
+        },
+        {
+          "id": "p2",
+          "nombre": "Cazuela de mariscos",
+          "descripcion": "Gambas, almejas y mejillones al ajillo con pan tostado",
+          "precio": 22.00,
+          "imagen": "",
+          "alergenos": ["marisco", "gluten"],
+          "destacado": true,
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "postres",
+      "nombre": "Postres",
+      "emoji": "🍮",
+      "productos": [
+        {
+          "id": "po1",
+          "nombre": "Pastel cordobés",
+          "descripcion": "Hojaldre relleno de cabello de ángel con azúcar glasé",
+          "precio": 4.50,
+          "imagen": "",
+          "alergenos": ["gluten", "huevo", "leche"],
+          "destacado": true,
+          "disponible": true
+        },
+        {
+          "id": "po2",
+          "nombre": "Tocino de cielo",
+          "descripcion": "Postre tradicional andaluz de yema y azúcar",
+          "precio": 3.50,
+          "imagen": "",
+          "alergenos": ["huevo"],
+          "destacado": false,
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "bebidas",
+      "nombre": "Bebidas",
+      "emoji": "🍷",
+      "productos": [
+        {
+          "id": "b1",
+          "nombre": "Vino tinto Montilla-Moriles",
+          "descripcion": "D.O. Montilla-Moriles, botella 75cl",
+          "precio": 12.00,
+          "imagen": "",
+          "alergenos": ["sulfitos"],
+          "destacado": false,
+          "disponible": true
+        },
+        {
+          "id": "b2",
+          "nombre": "Agua mineral",
+          "descripcion": "Botella 50cl con o sin gas",
+          "precio": 1.80,
+          "imagen": "",
+          "alergenos": [],
+          "destacado": false,
+          "disponible": true
+        },
+        {
+          "id": "b3",
+          "nombre": "Refrescos",
+          "descripcion": "Cola, Fanta naranja, limón o agua con gas",
+          "precio": 2.50,
+          "imagen": "",
+          "alergenos": [],
+          "destacado": false,
+          "disponible": true
+        }
+      ]
+    }
+  ]
+}
