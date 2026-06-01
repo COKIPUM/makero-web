@@ -1,3 +1,11 @@
+const SECURITY_HEADERS = {
+  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+  'X-Content-Type-Options': 'nosniff',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), payment=()',
+  'X-DNS-Prefetch-Control': 'on',
+}
+
 const CARTAS_META = {
   'bohemios': {
     title: 'BOHEMIOS PLAZA',
@@ -29,7 +37,7 @@ export default async function handler(req) {
     const html = await response.text()
     return new Response(html, {
       status: 200,
-      headers: { 'Content-Type': 'text/html; charset=utf-8' },
+      headers: { 'Content-Type': 'text/html; charset=utf-8', ...SECURITY_HEADERS },
     })
   }
 
@@ -63,7 +71,7 @@ export default async function handler(req) {
 
   return new Response(html, {
     status: 200,
-    headers: { 'Content-Type': 'text/html; charset=utf-8' },
+    headers: { 'Content-Type': 'text/html; charset=utf-8', ...SECURITY_HEADERS },
   })
 }
 

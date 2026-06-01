@@ -1,0 +1,20 @@
+Prompt seguridad
+
+Añade configuración de seguridad moderna para producción:
+- Content Security Policy (CSP)
+- X-Frame-Options
+- X-Content-Type-Options
+- Referrer-Policy
+- Permissions-Policy
+- HTTPS obligatorio
+
+
+Prompt seguridad formulario
+
+Protege el formulario contra:
+- spam
+- bots
+- inyecciones
+- abuso de peticiones
+
+Añade validaciones frontend
