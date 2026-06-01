@@ -57,12 +57,10 @@ export default function CartaDigital({ carta }) {
         {categoriasFiltradas.map(cat => (
           <div key={cat.id} style={{
             marginBottom: 'clamp(28px,4vw,44px)',
-            ...(cat.id === 'extras' ? {
-              background: 'rgba(255,255,255,0.02)',
-              border: '1px dashed rgba(255,255,255,0.12)',
-              borderRadius: 16,
-              padding: 'clamp(14px,2vw,20px) clamp(12px,2vw,18px)',
-            } : {})
+            background: 'rgba(255,255,255,0.02)',
+            border: '1px solid rgba(255,255,255,0.12)',
+            borderRadius: 16,
+            padding: 'clamp(14px,2vw,20px) clamp(12px,2vw,18px)',
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 'clamp(12px,1.5vw,18px)', paddingBottom: 'clamp(10px,1.2vw,14px)', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
               <span style={{ fontSize: 'clamp(18px,2.2vw,24px)' }}>{cat.emoji}</span>
