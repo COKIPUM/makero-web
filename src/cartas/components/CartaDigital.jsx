@@ -80,7 +80,7 @@ export default function CartaDigital({ carta }) {
 
         <div style={{ textAlign: 'center', padding: 'clamp(20px,3vw,32px) 0 8px', borderTop: '1px solid rgba(255,255,255,0.05)', marginTop: 8 }}>
           <p style={{ fontSize: 'clamp(11px,0.9vw,13px)', color: '#4B5563' }}>
-            Carta digital creada por{' '}
+            Carta digital creada con mucho 🧡 por{' '}
             <a href="https://www.makero.es" target="_blank" rel="noopener noreferrer" style={{ color: color_primario, textDecoration: 'none', fontWeight: 600 }}>
               MAKERO
             </a>

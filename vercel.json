@@ -4,6 +4,7 @@
   "installCommand": "npm install",
   "framework": "vite",
   "rewrites": [
+    { "source": "/connect/bohemios/carta", "destination": "/connect/bohemios/carta/index.html" },
     { "source": "/connect/:slug/carta", "destination": "/index.html" },
     { "source": "/aviso-legal", "destination": "/index.html" },
     { "source": "/privacidad", "destination": "/index.html" },
