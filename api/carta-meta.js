@@ -1,6 +1,3 @@
-// Vercel Edge Function — inyecta meta OG tags para bots de redes sociales
-// Se ejecuta en el edge antes de servir el HTML
-
 const CARTAS_META = {
   'bohemios': {
     title: 'BOHEMIOS PLAZA',
@@ -8,50 +5,35 @@ const CARTAS_META = {
     image: 'https://www.makero.es/cartas/bohemios-logo.jpg',
     url: 'https://www.makero.es/connect/bohemios/carta',
   },
-  // Añade más restaurantes aquí:
-  // 'mi-restaurante': {
-  //   title: 'MI RESTAURANTE',
-  //   description: 'Descripción...',
-  //   image: 'https://www.makero.es/cartas/mi-restaurante-logo.jpg',
-  //   url: 'https://www.makero.es/connect/mi-restaurante/carta',
-  // },
 }
 
 const BOT_AGENTS = [
-  'facebookexternalhit',
-  'whatsapp',
-  'twitterbot',
-  'linkedinbot',
-  'telegrambot',
-  'slackbot',
-  'discordbot',
-  'googlebot',
-  'bingbot',
+  'facebookexternalhit', 'whatsapp', 'twitterbot', 'linkedinbot',
+  'telegrambot', 'slackbot', 'discordbot', 'googlebot', 'bingbot',
 ]
 
 export default async function handler(req) {
   const url = new URL(req.url)
-  const parts = url.pathname.split('/')
-  // /connect/:slug/carta → parts = ['', 'connect', slug, 'carta']
-  const slug = parts[2]
+  const slug = url.searchParams.get('slug')
   const meta = CARTAS_META[slug]
-
-  if (!meta) {
-    return new Response(null, { status: 302, headers: { Location: '/' } })
-  }
 
   const ua = (req.headers.get('user-agent') || '').toLowerCase()
   const isBot = BOT_AGENTS.some(bot => ua.includes(bot))
 
-  // Si no es bot, redirige al SPA normal
-  if (!isBot) {
-    return new Response(null, {
-      status: 302,
-      headers: { Location: `/connect/${slug}/carta` },
+  // Si no es bot O no hay meta, sirve el index.html del SPA
+  if (!isBot || !meta) {
+    const spaUrl = new URL(req.url)
+    spaUrl.pathname = '/index.html'
+    spaUrl.search = ''
+    const response = await fetch(`https://www.makero.es/index.html`)
+    const html = await response.text()
+    return new Response(html, {
+      status: 200,
+      headers: { 'Content-Type': 'text/html; charset=utf-8' },
     })
   }
 
-  // Si es bot, devuelve HTML con meta tags
+  // Si es bot, devuelve HTML con meta OG de Bohemios
   const html = `<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -67,13 +49,15 @@ export default async function handler(req) {
   <meta property="og:image:width" content="720" />
   <meta property="og:image:height" content="720" />
   <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="${meta.title}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${meta.title}" />
   <meta name="twitter:description" content="${meta.description}" />
   <meta name="twitter:image" content="${meta.image}" />
 </head>
 <body>
-  <p>${meta.title}</p>
+  <h1>${meta.title}</h1>
+  <p>${meta.description}</p>
 </body>
 </html>`
 
@@ -83,6 +67,4 @@ export default async function handler(req) {
   })
 }
 
-export const config = {
-  matcher: ['/connect/:slug/carta'],
-}
+export const config = { runtime: 'edge' }

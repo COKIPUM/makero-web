@@ -3,16 +3,27 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "framework": "vite",
-  "functions": {
-    "api/carta-meta.js": {
-      "runtime": "edge"
+  "routes": [
+    {
+      "src": "/connect/([^/]+)/carta",
+      "dest": "/api/carta-meta?slug=$1"
+    },
+    {
+      "src": "/aviso-legal",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/privacidad",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/cookies",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
     }
-  },
-  "rewrites": [
-    { "source": "/connect/:slug/carta", "destination": "/index.html" },
-    { "source": "/aviso-legal", "destination": "/index.html" },
-    { "source": "/privacidad", "destination": "/index.html" },
-    { "source": "/cookies", "destination": "/index.html" }
   ],
   "headers": [
     {
@@ -23,7 +34,6 @@
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=()" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.emailjs.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.emailjs.com; frame-ancestors 'none';" },
         { "key": "X-DNS-Prefetch-Control", "value": "on" }
       ]
     }
