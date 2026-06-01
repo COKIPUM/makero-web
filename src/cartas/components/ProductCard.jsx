@@ -37,6 +37,17 @@ export default function ProductCard({ producto, moneda, colorPrimario }) {
           ★ Destacado
         </div>
       )}
+      {producto.mas_popular && (
+        <div style={{
+          position: 'absolute', bottom: 8, right: 8,
+          background: '#F4A460', color: '#fff',
+          fontSize: 'clamp(9px,0.8vw,11px)', fontWeight: 700,
+          padding: '2px 8px', borderRadius: 999,
+          letterSpacing: '0.06em', textTransform: 'uppercase',
+        }}>
+          🔥 Más popular
+        </div>
+      )}
 
       <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12, marginBottom: (producto.descripcion || producto.alergenos?.length) ? 5 : 0 }}>
         <h3 style={{ fontFamily: 'Sora, sans-serif', fontSize: 'clamp(13px,1.2vw,15px)', fontWeight: 700, color: '#F0F2F5', lineHeight: 1.3 }}>

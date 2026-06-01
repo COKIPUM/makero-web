@@ -58,7 +58,7 @@ export default function CartaDigital({ carta }) {
           <div key={cat.id} style={{
             marginBottom: 'clamp(28px,4vw,44px)',
             background: 'rgba(255,255,255,0.02)',
-            border: '1px solid rgba(255,255,255,0.12)',
+            border: cat.id === 'extras' ? '1px dashed rgba(255,255,255,0.12)' : '1px solid rgba(255,255,255,0.12)',
             borderRadius: 16,
             padding: 'clamp(14px,2vw,20px) clamp(12px,2vw,18px)',
           }}>

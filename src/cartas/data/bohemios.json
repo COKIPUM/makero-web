@@ -19,7 +19,7 @@
         {
           "id": "f1",
           "nombre": "Aceitunas",
-          "descripcion": "",
+          "descripcion": "Del olivo a la mesa",
           "precio": 1.5,
           "imagen": "",
           "alergenos": [],
@@ -60,7 +60,7 @@
             "huevo",
             "pescado"
           ],
-          "destacado": true,
+          "destacado": false,
           "disponible": true
         },
         {
@@ -104,11 +104,11 @@
         {
           "id": "f8",
           "nombre": "Lomo de orza",
-          "descripcion": "Con un toque de pimentón dulce y un chorrito de AOVE",
+          "descripcion": "Con pimentón dulce y un chorrito de AOVE",
           "precio": 9.0,
           "imagen": "",
           "alergenos": [],
-          "destacado": false,
+          "destacado": true,
           "disponible": true
         }
       ]
@@ -134,12 +134,13 @@
         {
           "id": "c2",
           "nombre": "Torreznos",
-          "descripcion": "",
+          "descripcion": "Crujientes y sabrosos",
           "precio": 9.0,
           "imagen": "",
           "alergenos": [],
           "destacado": false,
-          "disponible": true
+          "disponible": true,
+          "mas_popular": true
         },
         {
           "id": "c3",
@@ -166,7 +167,7 @@
             "leche",
             "huevo"
           ],
-          "destacado": true,
+          "destacado": false,
           "disponible": true
         },
         {
