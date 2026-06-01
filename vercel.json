@@ -3,6 +3,11 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "framework": "vite",
+  "functions": {
+    "api/carta-meta.js": {
+      "runtime": "edge"
+    }
+  },
   "rewrites": [
     { "source": "/connect/:slug/carta", "destination": "/index.html" },
     { "source": "/aviso-legal", "destination": "/index.html" },
