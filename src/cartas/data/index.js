@@ -1,8 +1,6 @@
-import restauranteDemo from './restaurante-demo.json'
 import bohemios from './bohemios.json'
 
 const cartas = {
-  'restaurante-demo': restauranteDemo,
   'bohemios': bohemios,
 }
 
