@@ -36,16 +36,17 @@
     <!-- Robots -->
     <meta name="robots" content="index, follow" />
 
-    <!-- Schema.org LocalBusiness -->
+    <!-- Schema.org: LocalBusiness -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "MAKERO",
-      "description": "Estudio creativo especializado en impresión 3D personalizada. Letras infantiles, bustos de mascotas, trofeos, logos y regalos únicos.",
+      "description": "Estudio creativo especializado en impresión 3D personalizada. Letras infantiles, bustos de mascotas, trofeos, logos y regalos únicos hechos en España.",
+      "slogan": "Tú pides, nosotros lo creamos. Así de fácil.",
       "url": "https://www.makero.es",
       "logo": "https://www.makero.es/images/logoMakero.png",
-      "image": "https://www.makero.es/images/logoMakero.png",
+      "image": "https://www.makero.es/images/og-image.png",
       "telephone": "+34608920445",
       "email": "info@makero.es",
       "address": {
@@ -54,12 +55,226 @@
         "addressRegion": "Córdoba",
         "addressCountry": "ES"
       },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+34608920445",
+        "email": "info@makero.es",
+        "contactType": "customer service",
+        "availableLanguage": "Spanish"
+      },
       "sameAs": [
-        "https://instagram.com/makero3d",
-        "https://tiktok.com/@makero3d"
+        "https://www.instagram.com/makero3d",
+        "https://www.tiktok.com/@makero3d"
       ],
       "priceRange": "€€",
       "openingHours": "Mo-Su 00:00-23:59"
+    }
+    </script>
+
+    <!-- Schema.org: ItemList (catálogo de productos) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Productos MAKERO — Impresión 3D Personalizada",
+      "url": "https://www.makero.es",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Product",
+            "name": "Letra IMAGINE Personalizada — Estilo Espacio",
+            "description": "Letra decorativa infantil temática espacial con inicial personalizada, nombre integrado y elementos como luna, estrellas, astronauta y cohete. Impresión 3D en PLA, hecha en España.",
+            "brand": { "@type": "Brand", "name": "MAKERO" },
+            "url": "https://www.makero.es",
+            "image": "https://www.makero.es/images/og-image.png",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "seller": { "@type": "Organization", "name": "MAKERO" }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Product",
+            "name": "Letra IMAGINE Personalizada — Estilo Cielo",
+            "description": "Decoración infantil con nubes, globos aerostáticos y animales en colores pastel. Inicial y nombre personalizados. Estilo elegante para habitaciones infantiles modernas.",
+            "brand": { "@type": "Brand", "name": "MAKERO" },
+            "url": "https://www.makero.es",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "seller": { "@type": "Organization", "name": "MAKERO" }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Product",
+            "name": "Letra IMAGINE Personalizada — Estilo Dino",
+            "description": "Decoración infantil temática dinosaurios con triceratops estilo crochet, hojas tropicales y huellas. Tonos beige, verde oliva y madera natural.",
+            "brand": { "@type": "Brand", "name": "MAKERO" },
+            "url": "https://www.makero.es",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "seller": { "@type": "Organization", "name": "MAKERO" }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Product",
+            "name": "Letras con Nombre Personalizadas",
+            "description": "Letras decorativas con nombre integrado, colores personalizables por separado. Adaptable a diferentes temáticas infantiles: pastel, dinosaurios, espacio, animales.",
+            "brand": { "@type": "Brand", "name": "MAKERO" },
+            "url": "https://www.makero.es",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "seller": { "@type": "Organization", "name": "MAKERO" }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Product",
+            "name": "Busto de Mascota Personalizado 3D",
+            "description": "Busto decorativo de tu mascota impreso en 3D a partir de fotos. Estilo moderno y minimalista con base negra personalizada con nombre y huella. Ideal como regalo emocional para amantes de las mascotas.",
+            "brand": { "@type": "Brand", "name": "MAKERO" },
+            "url": "https://www.makero.es",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "seller": { "@type": "Organization", "name": "MAKERO" }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Product",
+            "name": "Animales Decorativos Estilo Crochet 3D",
+            "description": "Animales decorativos impresos en 3D con acabado estilo crochet. Disponibles en múltiples tamaños, colores y temáticas: jungla, océano, fantasía, bosque, dinosaurios. Modelos estrella: zorro, flamenco, ballena, elefante, jirafa.",
+            "brand": { "@type": "Brand", "name": "MAKERO" },
+            "url": "https://www.makero.es",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "seller": { "@type": "Organization", "name": "MAKERO" }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Product",
+            "name": "Branding Corporativo 3D",
+            "description": "Logos de sobremesa, señalética, posavasos y decoración corporativa en 3D para oficinas, restaurantes e inmobiliarias. Estilo moderno, limpio y minimalista para reforzar la identidad física de marca.",
+            "brand": { "@type": "Brand", "name": "MAKERO" },
+            "url": "https://www.makero.es",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "seller": { "@type": "Organization", "name": "MAKERO" }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "Product",
+            "name": "Llaveros Personalizados y NFC",
+            "description": "Llaveros corporativos con logo, llaveros NFC, nombres personalizados y diseños temáticos para restaurantes, inmobiliarias y eventos. Merchandising promocional en impresión 3D.",
+            "brand": { "@type": "Brand", "name": "MAKERO" },
+            "url": "https://www.makero.es",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "seller": { "@type": "Organization", "name": "MAKERO" }
+            }
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema.org: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué productos ofrece MAKERO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MAKERO ofrece impresión 3D personalizada: letras infantiles decorativas IMAGINE (estilo espacio, cielo y dinosaurios), letras con nombre personalizadas, bustos de mascotas a partir de fotos, animales decorativos estilo crochet, branding corporativo 3D (logos de sobremesa, señalética, posavasos) y llaveros personalizados o NFC para empresas y eventos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde está MAKERO y envían a toda España?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MAKERO está en Cabra, Córdoba (España). Enviamos a toda España y gestionamos pedidos personalizados online a través de makero.es y por WhatsApp."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se hace un busto de mascota personalizado en 3D?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Envías fotos de tu mascota por WhatsApp o email, MAKERO modela el busto en 3D y lo imprime en PLA con base personalizada con el nombre y la huella. El resultado es una pieza decorativa única de alta calidad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es una letra IMAGINE personalizada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es una letra decorativa infantil impresa en 3D que combina la inicial del nombre del bebé con el nombre completo y elementos temáticos (espacio, nubes y globos, o dinosaurios). Es personalizable en colores y tamaños, ideal para decorar habitaciones infantiles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hace MAKERO merchandising y branding para empresas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. MAKERO diseña y fabrica branding físico corporativo: logos de sobremesa en 3D, llaveros con logo, llaveros NFC, señalética personalizada y decoración para oficinas, restaurantes e inmobiliarias."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué son los animales decorativos estilo crochet de MAKERO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Son figuras decorativas impresas en 3D con un acabado visual que imita el crochet artesanal. Disponibles en temáticas de jungla, océano, fantasía, bosque y dinosaurios. Los modelos más populares son el zorro, flamenco, ballena, elefante y jirafa. Se usan como complemento de las letras infantiles o como decoración independiente."
+          }
+        }
+      ]
     }
     </script>
 
