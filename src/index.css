@@ -441,7 +441,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .promo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
-  gap: clamp(20px, 2.4vw, 32px);
+  gap: clamp(36px, 3vw, 40px) clamp(24px, 2.6vw, 34px);
+  padding-top: 18px;
 }
 .promo-card {
   border: var(--diecut) solid var(--white);
@@ -457,21 +458,27 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .promo-card-yellow   { background: var(--yellow); rotate: 1deg; }
 .promo-card-blue     { background: var(--blue); color: var(--white); rotate: -0.8deg; }
 .promo-card:hover { translate: 0 -3px; rotate: 0deg; }
+/* pegatina que sobresale de la esquina de la tarjeta */
 .promo-badge {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: var(--ink); color: var(--white);
-  font: 700 var(--text-xs)/1.2 var(--font-body);
-  padding: 6px 14px; border-radius: var(--radius-pill);
-  margin-bottom: var(--space-md);
+  position: absolute; top: -22px; right: -14px; z-index: 2;
+  display: inline-flex; align-items: center; gap: 7px;
+  font: 400 clamp(14px, 1.2vw, 17px)/1 var(--font-display);
+  padding: 10px 16px;
+  background: var(--yellow); color: var(--ink);
+  border: 5px solid var(--white);
+  border-radius: var(--radius-pill);
+  box-shadow: 3px 4px 0 var(--ink);
+  rotate: 7deg;
 }
+.promo-badge svg { width: 16px; height: 16px; }
+.promo-card-yellow .promo-badge { background: var(--orange); rotate: -6deg; }
+.promo-card-blue .promo-badge   { background: var(--yellow); rotate: 5deg; }
 .promo-badge svg { stroke: currentColor; }
 .promo-discount { font-size: clamp(64px, 8vw, 120px); line-height: 0.9; margin-bottom: 10px; color: var(--white); text-shadow: 4px 5px 0 var(--ink); }
 .promo-card-blue .promo-discount { text-shadow: 4px 5px 0 var(--ink); }
 .promo-discount-label { font-size: var(--text-sm); font-weight: 700; margin-bottom: var(--space-md); }
 .promo-title { font: 400 var(--text-xl)/1.1 var(--font-display); margin-bottom: 10px; }
 .promo-desc  { font-size: var(--text-sm); margin-bottom: var(--space-md); line-height: 1.55; flex: 1; }
-.promo-card .btn { background: var(--ink); color: var(--white); box-shadow: none; }
-.promo-card .btn:hover { background: var(--white); color: var(--ink); }
 
 /* ─────────────────────────────────────────
    HOW IT WORKS — tarjetas pegadas

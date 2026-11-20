@@ -1,5 +1,3 @@
-const WA = 'https://wa.me/34608920445?text=%C2%A1Hola%2C%20Makero%21%20Estoy%20interesad%40%20en%20'
-
 const StarIcon = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
@@ -30,42 +28,35 @@ export default function Promociones() {
 
           {/* Card 1 — Naranja */}
           <div className="promo-card promo-card-featured fade-in">
-            <span className="promo-badge">
+            <span className="promo-badge promo-sticker">
               <StarIcon /> Más popular
             </span>
             <div className="promo-discount">20%</div>
             <div className="promo-discount-label">descuento en tu primer pedido</div>
             <h3 className="promo-title">Primera creación</h3>
             <p className="promo-desc">¿Primera vez con nosotros? Estrena tu experiencia MAKERO con un 20% de descuento en cualquier pedido. Sin mínimos.</p>
-            <a href="#contacto" className="btn">Pedir ahora</a>
           </div>
 
           {/* Card 2 — Amarillo */}
           <div className="promo-card promo-card-yellow fade-in delay-1">
-            <span className="promo-badge">
+            <span className="promo-badge promo-sticker">
               <BoltIcon /> Limitado
             </span>
             <div className="promo-discount">15%</div>
             <div className="promo-discount-label">en pedidos de 3 o más piezas</div>
             <h3 className="promo-title">Pack múltiple</h3>
             <p className="promo-desc">¿Necesitas varias piezas? Cuantas más pidas, mayor es el ahorro. Ideal para eventos, equipos o regalos a grupo.</p>
-            <a href="#contacto" className="btn">
-              Solicitar presupuesto
-            </a>
           </div>
 
           {/* Card 3 — Azul */}
           <div className="promo-card promo-card-blue fade-in delay-2">
-            <span className="promo-badge">
+            <span className="promo-badge promo-sticker">
               <GiftIcon /> Eventos
             </span>
             <div className="promo-discount">10%</div>
             <div className="promo-discount-label">descuento en paquete de evento</div>
             <h3 className="promo-title">Paquete evento</h3>
             <p className="promo-desc">Planifica tu evento con tiempo y consigue el mejor precio. Bodas, cumpleaños, fiestas temáticas y más.</p>
-            <a href="#contacto" className="btn">
-              Más info
-            </a>
           </div>
 
         </div>
