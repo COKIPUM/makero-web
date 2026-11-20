@@ -270,24 +270,37 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(14px, 1.6vw, 22px);
   margin-top: var(--space-xl);
-  max-width: 560px;
+  max-width: 580px;
+  align-items: stretch;
 }
 .stat-item {
-  display: flex; flex-direction: column;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center;
   background: var(--card-bg);
   border: 5px solid var(--white);
   border-radius: var(--radius);
   box-shadow: var(--shadow-card);
-  padding: 16px 18px;
+  padding: 18px 10px 16px;
+  min-width: 0;
 }
-.stat-item:nth-child(1) { rotate: -1.5deg; }
-.stat-item:nth-child(2) { rotate: 1deg; }
-.stat-item:nth-child(3) { rotate: -0.8deg; }
+/* composición orgánica: giros alternos y la del centro algo más baja */
+.stat-item:nth-child(1) { rotate: -2deg; }
+.stat-item:nth-child(2) { rotate: 1.5deg; translate: 0 8px; }
+.stat-item:nth-child(3) { rotate: -1deg; }
 .stat-number { font-size: var(--text-2xl); line-height: 1; }
 .stat-item:nth-child(1) .stat-number { color: var(--orange); }
 .stat-item:nth-child(2) .stat-number { color: var(--yellow); }
 .stat-item:nth-child(3) .stat-number { color: var(--blue-light); }
-.stat-label  { font: 400 clamp(12px, 1vw, 14px)/1.15 var(--font-display); letter-spacing: 0.01em; color: var(--text); margin-top: 8px; }
+/* una palabra por línea, centradas */
+.stat-label  {
+  font: 400 clamp(11px, 0.95vw, 13px)/1.2 var(--font-display);
+  letter-spacing: 0.01em;
+  color: var(--text);
+  margin-top: 10px;
+  word-spacing: 100vw;
+  max-width: 100%;
+  overflow-wrap: normal;
+}
 
 /* Hero visual — el vídeo como pegatina */
 .hero-visual { display: flex; justify-content: center; align-items: center; }
