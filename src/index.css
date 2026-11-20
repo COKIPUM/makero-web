@@ -377,6 +377,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   rotate: -3deg;
   translate: 0 -2px;
 }
+.title-sticker--orange { color: var(--orange); rotate: 2.5deg;
+}
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));

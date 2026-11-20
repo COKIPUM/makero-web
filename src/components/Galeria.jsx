@@ -16,7 +16,7 @@ export default function Galeria() {
     <section className="section" id="proyectos">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Proyectos <span className="title-accent">destacados</span></h2>
+          <h2 className="section-title">Proyectos <span className="title-sticker title-sticker--orange">destacados</span></h2>
           <p className="section-subtitle">Una selección de lo que somos capaces de crear. Cada pieza, una historia.</p>
         </div>
         <div className="gallery-grid">
