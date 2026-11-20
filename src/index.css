@@ -760,6 +760,7 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-color: v
   .gallery-img { object-position: var(--pos-m, var(--pos, center)); }
   .hero-content { grid-template-columns: minmax(0, 1fr); }
   .hero-3d-scene { max-width: clamp(260px, 78vw, 380px); }
+  .hero-visual { margin-top: 44px; }
   .hero-tag-2 { left: -34px; bottom: 34px; }
   .hero-tag-3 { right: -24px; }
   .hero-tag-1 { right: -6px; }
