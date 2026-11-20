@@ -5,7 +5,8 @@ export default function About() {
         <div className="about-inner">
           <div className="about-text fade-in">
             <h2 className="about-title">
-              Convertimos ideas en objetos reales
+              Convertimos <span className="title-sticker">ideas</span> en objetos{' '}
+              <span className="title-sticker title-sticker--orange">reales</span>
             </h2>
             <p className="about-desc">
               MAKERO nació del amor por la tecnología y el diseño. Somos un estudio creativo especializado en impresión personalizada, con un equipo apasionado que entiende que cada proyecto es único.
@@ -39,12 +40,7 @@ export default function About() {
 
               {/* Materiales sostenibles */}
               <div className="about-note">
-                <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="30" height="30" aria-hidden="true">
-                  <path d="M12 22V12"/>
-                  <path d="M12 12C12 12 7 10 5 6c4 0 7 2 7 6z"/>
-                  <path d="M12 12c0 0 5-2 7-6-4 0-7 2-7 6z"/>
-                  <path d="M5 22h14"/>
-                </svg>
+                <span className="about-leaf" aria-hidden="true"><span>Eco</span></span>
                 <div>
                   <div className="about-note-title">Materiales sostenibles</div>
                   <div className="about-note-text">Usamos PLA biodegradable y filamentos respetuosos con el medio ambiente.</div>

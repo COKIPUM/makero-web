@@ -646,27 +646,53 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   border: var(--diecut) solid var(--white);
   border-radius: var(--radius);
   box-shadow: var(--shadow-card);
-  padding: clamp(18px, 2vw, 26px);
+  padding: clamp(18px, 2vw, 26px) 12px;
   color: var(--ink);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center;
 }
 .about-stat:nth-child(1) { background: var(--orange); rotate: -1.5deg; }
 .about-stat:nth-child(2) { background: var(--yellow); rotate: 1.2deg; }
 .about-stat:nth-child(3) { background: var(--blue); color: var(--white); rotate: 1deg; }
 .about-stat:nth-child(4) { background: var(--white); rotate: -1deg; }
-.about-stat-number { font-size: clamp(36px, 4vw, 56px); line-height: 1; margin-bottom: 8px; }
-.about-stat-label  { font-size: var(--text-sm); font-weight: 700; }
+.about-stat-number { font-size: clamp(36px, 4vw, 56px); line-height: 1; margin-bottom: 10px; }
+/* misma letra que el texto de las cifras del hero: una palabra por línea */
+.about-stat-label  {
+  font: 400 clamp(12px, 1vw, 14px)/1.2 var(--font-display);
+  letter-spacing: 0.01em;
+  word-spacing: 100vw;
+}
+
+/* materiales sostenibles: pegatina en forma de hoja */
 .about-note {
   grid-column: span 2;
-  display: flex; align-items: center; gap: 14px;
+  position: relative;
+  display: flex; align-items: center; gap: 22px;
   background: var(--card-bg);
   border: var(--diecut) solid var(--white);
   border-radius: var(--radius);
-  box-shadow: var(--shadow-card);
-  padding: 16px 20px;
+  box-shadow: 5px 6px 0 var(--success);
+  padding: 20px 24px 20px 20px;
+  margin-top: 8px;
 }
-.about-note svg { stroke: var(--success); flex-shrink: 0; }
-.about-note-title { font-size: var(--text-sm); font-weight: 700; margin-bottom: 4px; }
-.about-note-text  { font-size: var(--text-xs); color: var(--text-muted); }
+.about-leaf {
+  flex-shrink: 0;
+  width: 78px; height: 78px;
+  display: grid; place-items: center;
+  background: var(--success);
+  border: 5px solid var(--white);
+  border-radius: 0 60% 0 60%;
+  box-shadow: 3px 4px 0 var(--ink);
+  rotate: -12deg;
+  margin-block: -14px;
+}
+.about-leaf span { rotate: 12deg; font: 400 17px/1 var(--font-display); color: var(--ink); }
+.about-note-title {
+  font: 400 clamp(20px, 2vw, 26px)/1.05 var(--font-display);
+  color: var(--success);
+  margin-bottom: 6px;
+}
+.about-note-text  { font-size: var(--text-sm); color: var(--text); }
 
 /* ─────────────────────────────────────────
    SOCIALS
