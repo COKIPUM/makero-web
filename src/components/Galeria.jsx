@@ -1,12 +1,13 @@
 import { galleryBg1, galleryBg2, galleryBg3, galleryBg4, galleryBg5, galleryBg6 } from '../assets/images'
 
+// pos: encuadre de cada foto para que la etiqueta no tape el producto
 const items = [
-  { id: 1, bg: galleryBg1, isImg: true, label: 'Detalles únicos',     name: 'Busto de mascota personalizado', pos: 'center center' },
-  { id: 2, bg: galleryBg2, isImg: false, label: 'Productos de empresa', name: 'Llaveros personalizados',        pos: 'center 75%' },
-  { id: 3, bg: galleryBg3, isImg: false, label: 'Deco infantil',        name: 'Letra IMAGINE',                 pos: 'center 60%' },
-  { id: 5, bg: galleryBg5, isImg: false, label: 'Regalos para bebés',   name: 'Letra + Animal personalizado',  pos: 'center 70%' },
-  { id: 4, bg: galleryBg4, isImg: false, label: 'Eventos',              name: 'Premios',                       pos: 'center center' },
-  { id: 6, bg: galleryBg6, isImg: false, label: 'Corporativo',          name: 'Logo de empresa',               pos: 'center center' },
+  { id: 1, src: galleryBg1, color: 'orange', name: 'Busto de mascota personalizado', pos: 'center 100%' },
+  { id: 2, src: galleryBg2, color: 'yellow', name: 'Llaveros personalizados',        pos: 'center 82%' },
+  { id: 3, src: galleryBg3, color: 'blue',   name: 'Letra IMAGINE',                  pos: 'center 58%' },
+  { id: 5, src: galleryBg5, color: 'blue',   name: 'Letra + Animal personalizado',   pos: 'center 100%' },
+  { id: 4, src: galleryBg4, color: 'orange', name: 'Premios',                        pos: 'center 84%' },
+  { id: 6, src: galleryBg6, color: 'yellow', name: 'Logo de empresa',                pos: 'center 62%' },
 ]
 
 export default function Galeria() {
@@ -14,35 +15,21 @@ export default function Galeria() {
     <section className="section" id="proyectos">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Proyectos destacados</h2>
+          <h2 className="section-title">Proyectos <span className="title-accent">destacados</span></h2>
           <p className="section-subtitle">Una selección de lo que somos capaces de crear. Cada pieza, una historia.</p>
         </div>
         <div className="gallery-grid">
           {items.map(item => (
-            <div key={item.id} className={`gallery-item gallery-item-${item.id} fade-in`}>
-              {item.isImg ? (
-                <div className="gallery-thumb">
-                  <img
-                    src={item.bg}
-                    alt={item.name}
-                    loading="lazy"
-                  />
-                </div>
-              ) : (
-                <div
-                  className="gallery-thumb"
-                  style={{
-                    backgroundImage: `url('${item.bg}')`,
-                    backgroundSize: item.size || 'cover',
-                    backgroundPosition: item.pos,
-                  }}
-                />
-              )}
-              <div className="gallery-overlay">
-                <span className="gallery-label">{item.label}</span>
-                <span className="gallery-name">{item.name}</span>
-              </div>
-            </div>
+            <figure key={item.id} className={`gallery-item gallery-item-${item.id} gallery-item--${item.color} fade-in`}>
+              <img
+                className="gallery-img"
+                src={item.src}
+                alt={item.name}
+                loading="lazy"
+                style={{ objectPosition: item.pos }}
+              />
+              <figcaption className="gallery-name">{item.name}</figcaption>
+            </figure>
           ))}
         </div>
       </div>
