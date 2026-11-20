@@ -7,21 +7,37 @@ const steps = [
 
 export default function ComoFunciona() {
   return (
-    <section className="section" id="como-funciona">
+    <section className="section creamos" id="como-funciona">
       <div className="container">
-        <div className="section-header">
-          <h2 className="section-title">¿Creamos?</h2>
-          <p className="section-subtitle">Simple, rápido y sin complicaciones. De tu idea a tus manos en cuatro pasos.</p>
+        <div className="creamos-head">
+          <h2 className="creamos-title">
+            <span className="creamos-q creamos-q--open" aria-hidden="true">¿</span>
+            <span className="creamos-word">Creamos</span>
+            <span className="creamos-q creamos-q--close" aria-hidden="true">?</span>
+            <span className="sr-only">¿Creamos?</span>
+          </h2>
+          <p className="creamos-lead">
+            <strong>Tú pones la idea, aunque sea un garabato.</strong> Nosotros la convertimos en algo único, en cuatro pasos.
+          </p>
         </div>
-        <ol className="how-steps">
-          {steps.map((s, i) => (
-            <li key={i} className={`step fade-in${i > 0 ? ` delay-${i}` : ''}`}>
-              <div className="step-number" aria-hidden="true">{i + 1}</div>
-              <h3 className="step-title">{s.title}</h3>
-              <p className="step-desc">{s.desc}</p>
-            </li>
-          ))}
-        </ol>
+
+        <div className="creamos-path">
+          <svg className="creamos-line" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 40 C 150 40, 200 100, 333 100 S 520 40, 666 40 S 850 100, 1000 100" />
+          </svg>
+          <ol className="how-steps">
+            {steps.map((s, i) => (
+              <li key={i} className={`step step--${i + 1} fade-in${i > 0 ? ` delay-${i}` : ''}`}>
+                <div className="step-number" aria-hidden="true">
+                  {i + 1}
+                  {i === steps.length - 1 && <span className="step-done">¡Listo!</span>}
+                </div>
+                <h3 className="step-title">{s.title}</h3>
+                <p className="step-desc">{s.desc}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
     </section>
   )
