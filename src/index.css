@@ -871,7 +871,8 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-thicknes
    BREAKPOINTS
 ───────────────────────────────────────── */
 @media (max-width: 1024px) {
-  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .footer-inner { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .footer-inner > div:first-child { grid-column: 1 / -1; }
   .how-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 48px; }
   .step:nth-child(even) { margin-top: 0; }
   .creamos-line { display: none; }
@@ -903,7 +904,12 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-thicknes
   .gallery-item-1,.gallery-item-2,.gallery-item-3,.gallery-item-4,.gallery-item-5,.gallery-item-6 {
     grid-column: auto; grid-row: auto; min-height: 0; aspect-ratio: 1 / 1;
   }
-  .footer-inner { grid-template-columns: minmax(0, 1fr); gap: clamp(24px, 4vw, 40px); }
+  .footer-inner { gap: 28px 14px; }
+  .footer-heading { font-size: 14px; }
+  .footer-links a { font-size: 13px; }
+  .footer-tagline { max-width: none; }
+  .footer-socials { gap: 10px; flex-wrap: nowrap; }
+  .footer-social { padding: 8px 11px; font-size: 12.5px; border-width: 3px; }
   .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
   .container { padding-inline: 16px; }
 }
