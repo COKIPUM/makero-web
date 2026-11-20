@@ -21,7 +21,7 @@ export default function Promociones() {
     <section className="section" id="promociones" style={{ background: 'var(--bg2)' }}>
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Descuentos exclusivos</h2>
+          <h2 className="section-title">Descuentos <span className="title-sticker title-sticker--blue">exclusivos</span></h2>
           <p className="section-subtitle">Ahorra en tu primer pedido o en pedidos por volumen. Sin compromiso.</p>
         </div>
         <div className="promo-grid">

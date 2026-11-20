@@ -396,6 +396,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   translate: 0 -2px;
 }
 .title-sticker--orange { color: var(--orange); text-shadow: 3px 4px 0 var(--yellow); rotate: 2.5deg; }
+.title-sticker--blue   { color: var(--blue);   text-shadow: 3px 4px 0 var(--white);  rotate: -2.5deg; }
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
