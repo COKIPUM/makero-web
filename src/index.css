@@ -370,6 +370,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    GALLERY
 ───────────────────────────────────────── */
 .title-accent { color: var(--orange); }
+.title-sticker {
+  display: inline-block;
+  color: var(--yellow);
+  text-shadow: 3px 4px 0 var(--blue);
+  rotate: -3deg;
+  translate: 0 -2px;
+}
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -399,7 +406,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .gallery-item-5 { grid-column: 1/5; grid-row: 3/4; }
 .gallery-item-4 { grid-column: 5/9; grid-row: 3/4; }
 .gallery-item-6 { grid-column: 9/13; grid-row: 3/4; }
-.gallery-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.gallery-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--pos, center); display: block; }
 .gallery-name {
   position: absolute; left: 14px; bottom: 14px; max-width: calc(100% - 28px);
   font: 400 clamp(14px, 1.2vw, 17px)/1.15 var(--font-display);
@@ -673,6 +680,7 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-color: v
   .section-header { grid-template-columns: minmax(0, 1fr); }
   .services-duo { grid-template-columns: minmax(0, 1fr); gap: 52px; }
   .gallery-name { bottom: auto; top: 12px; left: 12px; font-size: 14px; padding: 7px 11px; }
+  .gallery-img { object-position: var(--pos-m, var(--pos, center)); }
   .hero-content { grid-template-columns: minmax(0, 1fr); }
   .hero-3d-scene { max-width: clamp(260px, 78vw, 380px); }
   .hero-tag-2 { left: -34px; bottom: 34px; }
@@ -681,7 +689,7 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-color: v
   .about-inner, .contact-grid { grid-template-columns: minmax(0, 1fr); }
   .gallery-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: auto; }
   .gallery-item-1,.gallery-item-2,.gallery-item-3,.gallery-item-4,.gallery-item-5,.gallery-item-6 {
-    grid-column: auto; grid-row: auto; min-height: clamp(180px, 40vw, 260px);
+    grid-column: auto; grid-row: auto; min-height: 0; aspect-ratio: 1 / 1;
   }
   .footer-inner { grid-template-columns: minmax(0, 1fr); gap: clamp(24px, 4vw, 40px); }
   .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }

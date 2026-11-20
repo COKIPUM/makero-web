@@ -26,7 +26,7 @@ export default function Servicios() {
     <section className="section" id="servicios">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Servicios creativos</h2>
+          <h2 className="section-title">Servicios <span className="title-sticker">creativos</span></h2>
           <p className="section-subtitle">Desde una pieza única hasta una colección completa. Nos adaptamos a tu proyecto.</p>
         </div>
         <div className="services-duo">
