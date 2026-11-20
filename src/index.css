@@ -319,50 +319,52 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* ─────────────────────────────────────────
    SERVICES
 ───────────────────────────────────────── */
-.services-grid {
+.services-duo {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(22px, 2.6vw, 34px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(32px, 4vw, 56px);
+  padding-top: 24px;
 }
-.service-card {
+.services-side {
   --fill: var(--orange);
   --on-fill: var(--ink);
   --shade: var(--blue);
+  position: relative;
   background: var(--fill);
   color: var(--on-fill);
   border: var(--diecut) solid var(--white);
-  border-radius: var(--radius);
-  box-shadow: 5px 6px 0 var(--shade);
-  padding: clamp(22px, 2.4vw, 32px);
-  min-height: 250px;
-  display: flex; flex-direction: column;
-  position: relative;
+  border-radius: 24px;
+  box-shadow: 6px 7px 0 var(--shade);
+  padding: clamp(36px, 3.6vw, 48px) clamp(24px, 3.2vw, 44px) clamp(28px, 3vw, 40px);
   transition: translate var(--dur-micro) var(--ease-out), rotate var(--dur-micro) var(--ease-out);
 }
-.service-card--orange { --fill: var(--orange); --on-fill: var(--ink);   --shade: var(--blue); }
-.service-card--yellow { --fill: var(--yellow); --on-fill: var(--ink);   --shade: var(--blue); }
-.service-card--blue   { --fill: var(--blue);   --on-fill: var(--white); --shade: var(--orange); }
+.services-side--particulares { --fill: var(--orange); --on-fill: var(--ink);   --shade: var(--blue);   rotate: -1deg; }
+.services-side--empresas     { --fill: var(--blue);   --on-fill: var(--white); --shade: var(--orange); rotate: 1deg; }
+.services-side:hover { translate: 0 -4px; rotate: 0deg; }
 
-.service-card:nth-child(1) { rotate: -1.4deg; }
-.service-card:nth-child(2) { rotate: 0.9deg; }
-.service-card:nth-child(3) { rotate: -0.7deg; }
-.service-card:nth-child(4) { rotate: 1.1deg; }
-.service-card:nth-child(5) { rotate: -1deg; }
-.service-card:nth-child(6) { rotate: 0.8deg; }
-
-/* hover: solo movimiento */
-.service-card:hover { translate: 0 -5px; rotate: 0deg; }
-
-/* el número es el protagonista, como el 20% de descuentos */
-.service-num {
-  font: 400 clamp(64px, 6.4vw, 96px)/0.9 var(--font-display);
-  color: var(--white);
-  text-shadow: 4px 5px 0 var(--ink);
-  margin-bottom: auto;
-  padding-bottom: 22px;
+.services-tag {
+  position: absolute; top: -26px; left: 28px;
+  font: 400 clamp(17px, 1.5vw, 21px)/1 var(--font-display);
+  background: var(--yellow); color: var(--ink);
+  padding: 10px 18px;
+  border: 5px solid var(--white);
+  border-radius: var(--radius-pill);
+  box-shadow: 3px 4px 0 var(--ink);
+  rotate: -4deg;
 }
-.service-title { font: 400 var(--text-xl)/1.1 var(--font-display); margin-bottom: 8px; max-width: 16ch; }
-.service-desc  { font-size: var(--text-sm); font-weight: 600; line-height: 1.5; max-width: 34ch; opacity: 0.88; }
+.services-side--empresas .services-tag { rotate: 3deg; }
+.services-side-title {
+  font: 400 clamp(30px, 3.2vw, 46px)/1.02 var(--font-display);
+  margin: 6px 0 clamp(18px, 2vw, 26px);
+}
+.services-list { list-style: none; display: flex; flex-direction: column; }
+.services-list li {
+  padding: 16px 0;
+  border-top: 2px dashed currentColor;
+}
+.services-list li:last-child { border-bottom: 2px dashed currentColor; }
+.service-title { font: 400 var(--text-lg)/1.1 var(--font-display); margin-bottom: 4px; }
+.service-desc  { font-size: var(--text-sm); font-weight: 600; line-height: 1.5; opacity: 0.88; }
 
 /* ─────────────────────────────────────────
    GALLERY
@@ -660,7 +662,6 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-color: v
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .how-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .step:nth-child(even) { translate: 0 0; }
-  .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .nav-links { gap: 16px; }
 }
 
@@ -671,6 +672,7 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-color: v
 
 @media (max-width: 768px) {
   .section-header { grid-template-columns: minmax(0, 1fr); }
+  .services-duo { grid-template-columns: minmax(0, 1fr); gap: 52px; }
   .hero-content { grid-template-columns: minmax(0, 1fr); }
   .hero-3d-scene { max-width: clamp(260px, 78vw, 380px); }
   .hero-tag-2 { left: -10px; }
@@ -693,7 +695,6 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-color: v
     min-height: clamp(220px, 60vw, 300px);
   }
   .how-steps { grid-template-columns: minmax(0, 1fr); }
-  .services-grid { grid-template-columns: minmax(0, 1fr); }
   .about-card { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .hero-cta .btn { width: 100%; }
 }
