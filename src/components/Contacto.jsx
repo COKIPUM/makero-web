@@ -135,7 +135,6 @@ export default function Contacto() {
               <span className="ticket-stamp" aria-hidden="true">Sin compromiso</span>
               <div className="ticket-head">
                 <span className="ticket-title">Tu pedido</span>
-                <span className="ticket-brand">MAKERO</span>
               </div>
 
               {/* Honeypot — hidden from humans, bots fill it */}

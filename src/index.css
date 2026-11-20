@@ -787,7 +787,6 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-thicknes
   border-bottom: 3px dashed var(--rule);
 }
 .ticket-title { font: 400 clamp(22px, 2.2vw, 28px)/1 var(--font-display); }
-.ticket-brand { font: 400 14px/1 var(--font-display); color: var(--orange); letter-spacing: 0.04em; }
 .ticket-stamp {
   position: absolute; top: -24px; right: -16px; z-index: 2;
   font: 400 15px/1 var(--font-display);
