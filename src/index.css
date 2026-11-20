@@ -698,25 +698,41 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    SOCIALS
 ───────────────────────────────────────── */
 .socials-section { background: var(--bg2); }
-.socials-inner .section-header { margin-bottom: var(--space-lg); }
-.socials-grid { display: flex; gap: clamp(16px, 2vw, 26px); flex-wrap: wrap; }
+.socials-inner { text-align: center; }
+.socials-title { font: 400 min(var(--text-3xl), 3.25rem)/1.02 var(--font-display); }
+.title-sticker--white { color: var(--white); text-shadow: 3px 4px 0 var(--blue); rotate: -3deg; }
+/* @makero3d gigante en naranja con sombra blanca */
+.socials-handle {
+  display: inline-block;
+  margin: clamp(14px, 2vw, 22px) 0 10px;
+  font: 400 clamp(52px, 10vw, 140px)/1 var(--font-display);
+  color: var(--orange);
+  text-decoration: none;
+  -webkit-text-stroke: 6px var(--ink);
+  paint-order: stroke fill;
+  text-shadow: 5px 6px 0 var(--white);
+  rotate: -2deg;
+  transition: rotate var(--dur-micro) var(--ease-out), translate var(--dur-micro) var(--ease-out);
+}
+.socials-handle:hover { rotate: 0deg; translate: 0 -3px; }
+.socials-sub { color: var(--text-muted); font-size: var(--text-lg); max-width: 46ch; margin: 0 auto; }
+.socials-grid { display: flex; justify-content: center; gap: clamp(16px, 2vw, 26px); flex-wrap: wrap; margin-top: clamp(28px, 3vw, 40px); }
 .social-card {
-  display: flex; align-items: center; gap: 12px;
-  background: var(--card-bg);
+  display: flex; align-items: center; gap: 10px;
   border: 5px solid var(--white);
   border-radius: var(--radius-pill);
-  box-shadow: var(--shadow-card);
+  box-shadow: 4px 5px 0 var(--ink);
   padding: 14px 26px;
-  text-decoration: none; color: var(--text);
-  font: 700 var(--text-base) var(--font-body);
-  transition: translate var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out);
+  text-decoration: none; color: var(--white);
+  font: 400 clamp(16px, 1.5vw, 20px)/1 var(--font-display);
+  transition: translate var(--dur-micro) var(--ease-out), rotate var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out);
 }
-.social-card:hover { translate: -1px -2px; }
-.social-card:active { translate: 4px 5px; box-shadow: var(--shadow-press); }
-.social-card svg { flex-shrink: 0; }
-.social-instagram svg { color: var(--instagram); }
-.social-tiktok svg    { color: var(--white); }
-.social-whatsapp svg  { color: var(--whatsapp); }
+.social-card svg { flex-shrink: 0; width: 26px; height: 26px; color: currentColor; }
+.social-instagram { background: var(--instagram); rotate: -4deg; }
+.social-tiktok    { background: var(--ink); rotate: 3deg; }
+.social-whatsapp  { background: var(--whatsapp); color: var(--ink); rotate: -2deg; }
+.social-card:hover { translate: 0 -3px; rotate: 0deg; }
+.social-card:active { translate: 3px 4px; box-shadow: 1px 1px 0 var(--ink); }
 
 /* ─────────────────────────────────────────
    CONTACT
@@ -853,6 +869,7 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-color: v
   .hero-stats { gap: 12px; }
   .stat-item { padding: 12px 6px; border-width: 4px; }
   .stat-label { font-size: 11.5px; }
+  .socials-handle { font-size: 12.5vw; -webkit-text-stroke-width: 4px; text-shadow: 3px 4px 0 var(--white); }
   .gallery-grid { grid-template-columns: minmax(0, 1fr); }
   .gallery-item-1,.gallery-item-2,.gallery-item-3,.gallery-item-4,.gallery-item-5,.gallery-item-6 {
     min-height: 0; aspect-ratio: 1 / 1;

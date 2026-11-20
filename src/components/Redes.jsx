@@ -33,15 +33,18 @@ const socials = [
 
 export default function Redes() {
   return (
-    <section className="section-sm socials-section" id="redes">
+    <section className="section socials-section" id="redes">
       <div className="container">
         <div className="socials-inner">
-          <div className="section-header">
-            <h2 className="section-title">Nos encontrarás aquí</h2>
-            <p className="section-subtitle">
-              Síguenos para ver los últimos proyectos, consejos y novedades de MAKERO.
-            </p>
-          </div>
+          <h2 className="socials-title">
+            Nos encontrarás <span className="title-sticker title-sticker--white">aquí</span>
+          </h2>
+          <a className="socials-handle" href="https://instagram.com/makero3d" target="_blank" rel="noopener noreferrer">
+            @makero3d
+          </a>
+          <p className="socials-sub">
+            Síguenos para ver los últimos proyectos, consejos y novedades de MAKERO.
+          </p>
           <div className="socials-grid">
             {socials.map(s => (
               <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
