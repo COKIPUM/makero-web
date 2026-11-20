@@ -367,16 +367,19 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .services-side--empresas .services-tag { rotate: 3deg; }
 .services-side-title {
-  font: 400 clamp(30px, 3.2vw, 46px)/1.02 var(--font-display);
+  font: 400 clamp(32px, 3.5vw, 50px)/1.02 var(--font-display);
   margin: 6px 0 clamp(18px, 2vw, 26px);
+  color: var(--white);
+  text-shadow: 3px 4px 0 var(--ink);
 }
+.services-side--empresas .services-side-title { color: var(--yellow); }
 .services-list { list-style: none; display: flex; flex-direction: column; }
 .services-list li {
   padding: 16px 0;
   border-top: 2px dashed currentColor;
 }
 .services-list li:last-child { border-bottom: 2px dashed currentColor; }
-.service-title { font: 400 var(--text-lg)/1.1 var(--font-display); margin-bottom: 4px; }
+.service-title { font: 800 var(--text-lg)/1.2 var(--font-body); margin-bottom: 4px; }
 .service-desc  { font-size: var(--text-sm); font-weight: 600; line-height: 1.5; opacity: 0.88; }
 
 /* ─────────────────────────────────────────
