@@ -569,10 +569,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   vertical-align: -0.08em;
   height: 0.95em;
   rotate: -4deg;
-  filter: drop-shadow(3px 4px 0 var(--orange));
+  filter: drop-shadow(3px 4px 0 var(--blue));
 }
 .makero-wordmark svg { height: 100%; width: auto; display: block; overflow: visible; }
-.makero-wordmark .mk-a, .makero-wordmark .mk-b { fill: var(--white); }
+.makero-wordmark .mk-a, .makero-wordmark .mk-b { fill: var(--orange); }
 
 .google-stars {
   display: inline-flex; align-items: center; gap: 8px;
