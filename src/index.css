@@ -293,7 +293,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .stat-item:nth-child(3) .stat-number { color: var(--blue-light); }
 /* una palabra por línea, centradas */
 .stat-label  {
-  font: 400 clamp(11px, 0.95vw, 13px)/1.2 var(--font-display);
+  font: 400 clamp(13px, 1.15vw, 16px)/1.15 var(--font-display);
   letter-spacing: 0.01em;
   color: var(--text);
   margin-top: 10px;
@@ -658,7 +658,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .about-stat-number { font-size: clamp(36px, 4vw, 56px); line-height: 1; margin-bottom: 10px; }
 /* misma letra que el texto de las cifras del hero: una palabra por línea */
 .about-stat-label  {
-  font: 400 clamp(12px, 1vw, 14px)/1.2 var(--font-display);
+  font: 400 clamp(15px, 1.35vw, 19px)/1.15 var(--font-display);
   letter-spacing: 0.01em;
   word-spacing: 100vw;
 }
@@ -851,7 +851,8 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-color: v
 
 @media (max-width: 480px) {
   .hero-stats { gap: 12px; }
-  .stat-item { padding: 12px 10px; border-width: 4px; }
+  .stat-item { padding: 12px 6px; border-width: 4px; }
+  .stat-label { font-size: 11.5px; }
   .gallery-grid { grid-template-columns: minmax(0, 1fr); }
   .gallery-item-1,.gallery-item-2,.gallery-item-3,.gallery-item-4,.gallery-item-5,.gallery-item-6 {
     min-height: 0; aspect-ratio: 1 / 1;
