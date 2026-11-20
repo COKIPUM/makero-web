@@ -98,7 +98,7 @@ export default function Contacto() {
     <section className="section" id="contacto">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Cuéntanos tu idea</h2>
+          <h2 className="section-title">Cuéntanos tu <span className="title-sticker">idea</span></h2>
           <p className="section-subtitle">Escríbenos y te respondemos en menos de 24h. Sin compromiso.</p>
         </div>
 
@@ -106,7 +106,7 @@ export default function Contacto() {
           {/* Info */}
           <div className="contact-info">
             {infoItems.map((item, i) => (
-              <div key={i} className="contact-info-item">
+              <div key={i} className={`contact-info-item contact-info-item--${i + 1}`}>
                 {item.icon}
                 <div>
                   <div className="contact-info-title">{item.title}</div>
@@ -131,7 +131,12 @@ export default function Contacto() {
               </div>
             </div>
           ) : (
-            <form className="contact-form" onSubmit={submit}>
+            <form className="contact-form contact-ticket" onSubmit={submit}>
+              <span className="ticket-stamp" aria-hidden="true">Sin compromiso</span>
+              <div className="ticket-head">
+                <span className="ticket-title">Tu pedido</span>
+                <span className="ticket-brand">MAKERO</span>
+              </div>
 
               {/* Honeypot — hidden from humans, bots fill it */}
               <input

@@ -748,27 +748,56 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 ───────────────────────────────────────── */
 .contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 60px); align-items: start; }
 .contact-info { display: flex; flex-direction: column; gap: 18px; }
+/* datos de contacto como pegatinas de color */
 .contact-info-item {
+  --fill: var(--orange);
   display: flex; gap: 16px; align-items: center;
-  background: var(--card-bg);
+  background: var(--fill);
+  color: var(--ink);
   border: 5px solid var(--white);
   border-radius: var(--radius);
-  box-shadow: var(--shadow-card);
-  padding: 14px 18px;
+  box-shadow: 4px 5px 0 var(--ink);
+  padding: 16px 20px;
 }
-.contact-info-item:nth-child(odd)  { rotate: -0.6deg; }
-.contact-info-item:nth-child(even) { rotate: 0.6deg; }
-.contact-info-title { font-size: var(--text-xs); font-weight: 700; color: var(--text-muted); margin-bottom: 2px; }
-.contact-info-text  { color: var(--text); font-size: var(--text-sm); font-weight: 600; text-decoration: none; }
-a.contact-info-text:hover { text-decoration: underline; text-decoration-color: var(--orange); text-decoration-thickness: 2px; }
+.contact-info-item--1 { --fill: var(--orange);   rotate: -1.5deg; }
+.contact-info-item--2 { --fill: var(--whatsapp); rotate: 1deg; }
+.contact-info-item--3 { --fill: var(--yellow);   rotate: -1deg; }
+.contact-info-item--4 { --fill: var(--blue);     color: var(--white); rotate: 1.2deg; }
+.contact-info-item svg { color: currentColor; filter: none !important; }
+.contact-info-item svg[fill="none"] { stroke: currentColor; }
+.contact-info-item svg:not([fill="none"]) { fill: currentColor; }
+.contact-info-title { font-size: var(--text-xs); font-weight: 800; color: inherit; opacity: 0.8; margin-bottom: 2px; }
+.contact-info-text  { color: inherit; font-size: var(--text-base); font-weight: 800; text-decoration: none; }
+a.contact-info-text:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+
+/* formulario como hoja de pedido (oscura) */
 .contact-form {
+  position: relative;
   display: flex; flex-direction: column; gap: clamp(14px, 1.5vw, 18px);
   background: var(--card-bg);
   border: var(--diecut) solid var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-card);
-  padding: clamp(20px, 3vw, 36px);
+  border-radius: 20px;
+  box-shadow: 6px 7px 0 var(--orange);
+  padding: clamp(22px, 3vw, 34px);
 }
+.ticket-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin: 0 calc(-1 * clamp(22px, 3vw, 34px)) 8px;
+  padding: 0 clamp(22px, 3vw, 34px) 18px;
+  border-bottom: 3px dashed var(--rule);
+}
+.ticket-title { font: 400 clamp(22px, 2.2vw, 28px)/1 var(--font-display); }
+.ticket-brand { font: 400 14px/1 var(--font-display); color: var(--orange); letter-spacing: 0.04em; }
+.ticket-stamp {
+  position: absolute; top: -24px; right: -16px; z-index: 2;
+  font: 400 15px/1 var(--font-display);
+  background: var(--yellow); color: var(--ink);
+  padding: 9px 15px;
+  border: 5px solid var(--white); border-radius: var(--radius-pill);
+  box-shadow: 3px 4px 0 var(--ink);
+  rotate: 8deg;
+}
+.contact-form .btn-primary { font: 400 clamp(15px, 1.25vw, 17px)/1 var(--font-display); min-height: 58px; }
 .form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
 .form-group { display: flex; flex-direction: column; gap: 6px; }
 .form-label { font-size: var(--text-xs); font-weight: 700; color: var(--text); }
@@ -785,8 +814,8 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-color: v
 .form-input:hover, .form-textarea:hover { border-color: var(--text-muted); }
 .form-input:focus, .form-textarea:focus { border-color: var(--orange); }
 .form-textarea { min-height: clamp(110px, 12vw, 150px); }
-.form-check { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: var(--text-xs); color: var(--text-muted); line-height: 1.5; }
-.form-check input { margin-top: 2px; accent-color: var(--orange); flex-shrink: 0; width: 18px; height: 18px; }
+.form-check { display: block; padding-left: 28px; position: relative; cursor: pointer; font-size: var(--text-xs); color: var(--text-muted); line-height: 1.5; }
+.form-check input { position: absolute; left: 0; top: 1px; margin: 0; accent-color: var(--orange); width: 18px; height: 18px; }
 .form-check a { color: var(--orange); text-decoration: underline; }
 .form-msg { font-size: var(--text-xs); text-align: center; font-weight: 600; }
 .form-msg-error { color: var(--danger); }
