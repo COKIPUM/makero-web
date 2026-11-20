@@ -598,7 +598,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   background: var(--card-bg);
   border: var(--diecut) solid var(--white);
   border-radius: var(--radius);
-  box-shadow: var(--shadow-card);
+  box-shadow: 5px 6px 0 var(--band);
   padding: 0 clamp(20px, 2.2vw, 26px) clamp(18px, 2vw, 22px);
   display: flex; flex-direction: column;
   overflow: hidden;
@@ -607,14 +607,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .testimonial-card:nth-child(even) { rotate: 0.8deg; }
 .testimonial-card--2, .testimonial-card--6 { --band: var(--yellow); }
 .testimonial-card--3, .testimonial-card--4 { --band: var(--blue-light); }
-/* cinta de color con las estrellas */
+/* cinta oscura con las estrellas y filo del color de la tarjeta */
 .testimonial-band {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center; justify-content: center;
   margin: 0 calc(-1 * clamp(20px, 2.2vw, 26px)) 16px;
-  padding: 12px clamp(20px, 2.2vw, 26px);
-  background: var(--band);
+  padding: 14px clamp(20px, 2.2vw, 26px) 12px;
+  background: var(--ink);
+  border-bottom: 8px solid var(--band);
 }
-.testimonial-stars { color: var(--ink); font-size: var(--text-lg); letter-spacing: 2px; line-height: 1; }
+.testimonial-stars {
+  color: #F4B400;
+  font-size: clamp(28px, 2.6vw, 34px);
+  letter-spacing: 4px; line-height: 1;
+  -webkit-text-stroke: 2.5px var(--ink);
+  paint-order: stroke fill;
+}
 .testimonial-text  { margin: 0 0 var(--space-md); font-size: var(--text-base); color: var(--text); line-height: 1.6; flex: 1; }
 .testimonial-author { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 14px; border-top: 2px dashed var(--rule); }
 .testimonial-name  { font-size: var(--text-sm); font-weight: 800; }

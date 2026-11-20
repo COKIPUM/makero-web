@@ -46,7 +46,6 @@ export default function Testimonials() {
             <figure key={r.name} className={`testimonial-card testimonial-card--${i + 1} fade-in${i % 3 === 1 ? ' delay-1' : i % 3 === 2 ? ' delay-2' : ''}`}>
               <div className="testimonial-band">
                 <span className="testimonial-stars" aria-label="5 de 5 estrellas">★★★★★</span>
-                <GoogleG />
               </div>
               <blockquote className="testimonial-text">{r.text}</blockquote>
               <figcaption className="testimonial-author">
