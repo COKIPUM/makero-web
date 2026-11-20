@@ -464,20 +464,32 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   display: inline-flex; align-items: center; gap: 7px;
   font: 400 clamp(14px, 1.2vw, 17px)/1 var(--font-display);
   padding: 10px 16px;
-  background: var(--yellow); color: var(--ink);
+  background: var(--ink); color: var(--white);
   border: 5px solid var(--white);
   border-radius: var(--radius-pill);
   box-shadow: 3px 4px 0 var(--ink);
   rotate: 7deg;
 }
-.promo-badge svg { width: 16px; height: 16px; }
-.promo-card-yellow .promo-badge { background: var(--orange); rotate: -6deg; }
-.promo-card-blue .promo-badge   { background: var(--yellow); rotate: 5deg; }
-.promo-badge svg { stroke: currentColor; }
+/* icono relleno del color de su tarjeta */
+.promo-badge svg { width: 18px; height: 18px; fill: var(--yellow); stroke: none; }
+.promo-card-yellow .promo-badge { rotate: -6deg; }
+.promo-card-yellow .promo-badge svg { fill: var(--orange); }
+.promo-card-blue .promo-badge   { rotate: 5deg; }
+.promo-card-blue .promo-badge svg { fill: var(--blue-light); }
 .promo-discount { font-size: clamp(64px, 8vw, 120px); line-height: 0.9; margin-bottom: 10px; color: var(--white); text-shadow: 4px 5px 0 var(--ink); }
 .promo-card-blue .promo-discount { text-shadow: 4px 5px 0 var(--ink); }
 .promo-discount-label { font-size: var(--text-sm); font-weight: 700; margin-bottom: var(--space-md); }
-.promo-title { font: 400 var(--text-xl)/1.1 var(--font-display); margin-bottom: 10px; }
+/* título en cinta */
+.promo-title {
+  display: inline-block;
+  font: 400 var(--text-xl)/1.1 var(--font-display);
+  background: var(--ink); color: var(--white);
+  padding: 8px 14px;
+  border-radius: 10px;
+  rotate: -1.5deg;
+  margin-bottom: 14px;
+}
+.promo-card-blue .promo-title { background: var(--white); color: var(--ink); }
 .promo-desc  { font-size: var(--text-sm); margin-bottom: var(--space-md); line-height: 1.55; flex: 1; }
 
 /* ─────────────────────────────────────────
