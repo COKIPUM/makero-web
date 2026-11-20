@@ -40,7 +40,7 @@ const infoItems = [
   },
   {
     icon: <InfoIcon d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3M16 17h2a2 2 0 0 0 2-2v-3.34a2 2 0 0 0-.59-1.42l-2.65-2.65A2 2 0 0 0 15.35 7H13M9 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0M20 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0" />,
-    title: 'Tiempo de entrega', text: 'Desde 72h tras confirmación',
+    title: 'Tiempo de entrega', text: 'Entrega desde 72h tras confirmación',
   },
 ]
 
@@ -108,12 +108,9 @@ export default function Contacto() {
             {infoItems.map((item, i) => (
               <div key={i} className={`contact-info-item contact-info-item--${i + 1}`}>
                 {item.icon}
-                <div>
-                  <div className="contact-info-title">{item.title}</div>
-                  {item.href
-                    ? <a href={item.href} className="contact-info-text">{item.text}</a>
-                    : <div className="contact-info-text">{item.text}</div>}
-                </div>
+                {item.href
+                  ? <a href={item.href} className="contact-info-text" aria-label={`${item.title}: ${item.text}`}>{item.text}</a>
+                  : <div className="contact-info-text"><span className="sr-only">{item.title}: </span>{item.text}</div>}
               </div>
             ))}
           </div>
