@@ -35,7 +35,7 @@ export default function Navbar() {
             ))}
           </ul>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            <a href={WA} className="btn btn-primary" style={{ minHeight: 42 }}>
+            <a href={WA} className="btn btn-whatsapp" style={{ minHeight: 42 }}>
               <WaIcon /> WhatsApp
             </a>
             <button
@@ -65,7 +65,7 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a href={WA} className="btn btn-primary" style={{ marginTop: 16 }}>
+          <a href={WA} className="btn btn-whatsapp" style={{ marginTop: 16 }}>
             <WaIcon /> WhatsApp
           </a>
         </div>

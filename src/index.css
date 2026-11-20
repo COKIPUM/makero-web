@@ -32,6 +32,7 @@
   /* Redes */
   --instagram: #E1306C;
   --whatsapp:  #25D366;
+  --whatsapp-deep: #1FB457;
 
   /* Tipografía */
   --font-display: "Bowlby One SC", "Arial Black", sans-serif;
@@ -157,6 +158,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .btn-primary:hover { background: var(--orange-deep); translate: -1px -2px; }
 .btn-primary:active { translate: 4px 5px; box-shadow: 0 0 0 5px var(--white), var(--shadow-press); }
 .btn-primary:disabled { cursor: progress; }
+.btn-whatsapp {
+  background: var(--whatsapp);
+  color: var(--ink);
+  box-shadow: 0 0 0 4px var(--white), var(--shadow-card);
+}
+.btn-whatsapp:hover { background: var(--whatsapp-deep); translate: -1px -2px; }
+.btn-whatsapp:active { translate: 4px 5px; box-shadow: 0 0 0 4px var(--white), var(--shadow-press); }
 .btn-ghost { color: var(--text); }
 .btn-ghost:hover { background: var(--white); color: var(--ink); }
 .btn-ghost:active { translate: 1px 1px; }
@@ -255,20 +263,31 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   line-height: 1.5; max-width: 30ch;
   margin-bottom: var(--space-lg);
 }
+.hero-title-orange { color: var(--orange); }
+.hero-title-yellow { color: var(--yellow); }
 .hero-cta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
 .hero-stats {
-  display: flex; gap: clamp(20px, 3vw, 40px);
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 1.6vw, 22px);
   margin-top: var(--space-xl);
-  padding-top: var(--space-lg);
-  border-top: 2px dashed var(--rule);
-  flex-wrap: wrap;
+  max-width: 560px;
 }
-.stat-item { display: flex; flex-direction: column; }
+.stat-item {
+  display: flex; flex-direction: column;
+  background: var(--card-bg);
+  border: 5px solid var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 16px 18px;
+}
+.stat-item:nth-child(1) { rotate: -1.5deg; }
+.stat-item:nth-child(2) { rotate: 1deg; }
+.stat-item:nth-child(3) { rotate: -0.8deg; }
 .stat-number { font-size: var(--text-2xl); line-height: 1; }
 .stat-item:nth-child(1) .stat-number { color: var(--orange); }
 .stat-item:nth-child(2) .stat-number { color: var(--yellow); }
 .stat-item:nth-child(3) .stat-number { color: var(--blue-light); }
-.stat-label  { font-size: var(--text-xs); color: var(--text-muted); margin-top: 6px; font-weight: 600; }
+.stat-label  { font-size: var(--text-xs); color: var(--text-muted); margin-top: 8px; font-weight: 600; line-height: 1.3; }
 
 /* Hero visual — el vídeo como pegatina */
 .hero-visual { display: flex; justify-content: center; align-items: center; }
@@ -295,7 +314,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .hero-tag-1 { top: -18px; right: -14px; background: var(--orange); rotate: 6deg; }
 .hero-tag-2 { bottom: 64px; left: -34px; background: var(--yellow); rotate: -5deg; }
-.hero-tag-3 { bottom: -16px; right: 30px; background: var(--white); rotate: 3deg; }
+.hero-tag-3 { bottom: -16px; right: 30px; background: var(--white); border-color: var(--blue); box-shadow: 4px 5px 0 var(--orange); rotate: 3deg; }
 
 /* ─────────────────────────────────────────
    SERVICES
@@ -654,7 +673,8 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-color: v
 }
 
 @media (max-width: 480px) {
-  .hero-stats { gap: 18px; }
+  .hero-stats { gap: 12px; }
+  .stat-item { padding: 12px 10px; border-width: 4px; }
   .gallery-grid { grid-template-columns: minmax(0, 1fr); }
   .gallery-item-1,.gallery-item-2,.gallery-item-3,.gallery-item-4,.gallery-item-5,.gallery-item-6 {
     min-height: clamp(220px, 60vw, 300px);
