@@ -1,58 +1,67 @@
-import { testimonial1, testimonial2, testimonial3, testimonial4, testimonial5 } from '../assets/images'
+import wordmark from '../assets/makero-wordmark.svg?raw'
+
+// Opiniones reales de la ficha de Google de MAKERO (texto tal cual).
+const GOOGLE_REVIEWS = 'https://share.google/dqxcA3Y9fAHSUa4tS'
 
 const reviews = [
-  {
-    img: testimonial1, alt: 'Laura Martínez', pos: 'center 60%',
-    name: 'Laura Martínez', role: 'Cliente particular · Sevilla',
-    text: '"Pedí un busto de mi perro para regalárselo a mi novia y quedó espectacular. Idéntico a nuestra mascota. La calidad es increíble y el trato fue muy cercano. 100% repetiría."',
-  },
-  {
-    img: testimonial2, alt: 'Carlos y Rocío', pos: 'center 100%',
-    name: 'Carlos y Rocío', role: 'Recién casados · Córdoba',
-    text: '"Los detalles de nuestra boda fueron un éxito total. Cada invitado se llevó su figura personalizada. Makero superó todas nuestras expectativas. Gracias de corazón."',
-  },
-  {
-    img: testimonial3, alt: 'Miguel Pereira', pos: 'center 60%',
-    name: 'Miguel Pereira', role: 'Diseñador industrial · Madrid',
-    text: '"Necesitaba un prototipo funcional en tiempo récord. Makero lo entregó en 48h con una precisión milimétrica. Servicio profesional y precio justo. Volvería sin dudar."',
-  },
-  {
-    img: testimonial5, alt: 'Ana García', pos: 'center 60%',
-    name: 'Ana García', role: 'Profesora · Granada',
-    text: '"Encargué letras decorativas personalizadas para el cuarto de mi hija y quedaron preciosas. El proceso fue súper fácil y rápido. Totalmente recomendable."',
-  },
-  {
-    img: testimonial4, alt: 'María Quero', pos: 'center 60%',
-    name: 'María Quero', role: 'Empresaria · Málaga',
-    text: '"Mandé hacer trofeos personalizados para nuestra empresa y el resultado fue impresionante. Todos los empleados quedaron encantados. Calidad y profesionalidad al máximo."',
-  },
+  { name: 'Antonio Pavón M.',   text: 'Genial experiencia. Jose es un crack, capta rápidamente la idea de los clientes y la ejecuta a la perfección. Altamente recomendable😜' },
+  { name: 'Marta Calvo M.',     text: 'Gran profesional! Me ha encantado el resultado. No dudes en encargarle tus ideas, porque las hace realidad!!!' },
+  { name: 'Isaac Fernández G.', text: 'Muy profesional y atento. En todo momento te va explicando el proceso y siempre busca la mejor solución.' },
+  { name: 'Paula C.',           text: 'Todo perfecto. Me hizo un pedido personalizado de llaveros. El trato 10/10' },
+  { name: 'Fran Ruiz',          text: 'Es súper rápido, te informa de todo. La verdad que volveremos a repetir en otros productos 😊' },
+  { name: 'Ana María Mesa M.',  text: 'Súper encantada con el trato recibido y por el diseño. Mil gracias' },
 ]
+
+const GoogleG = () => (
+  <svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true">
+    <path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/>
+    <path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/>
+    <path fill="#FBBC05" d="M10.5 28.7c-.5-1.4-.8-3-.8-4.7s.3-3.2.8-4.7l-7.9-6.1C1 16.4 0 20.1 0 24s1 7.6 2.6 10.8l7.9-6.1z"/>
+    <path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/>
+  </svg>
+)
 
 export default function Testimonials() {
   return (
     <section className="section" style={{ background: 'var(--bg2)' }} id="testimonials">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Lo que dicen de MAKERO</h2>
-          <p className="section-subtitle">Más de 300 clientes satisfechos avalan nuestro trabajo. Sus palabras, no las nuestras.</p>
+          <h2 className="section-title testimonials-title">
+            Lo que dicen de{' '}
+            <span className="makero-wordmark" dangerouslySetInnerHTML={{ __html: wordmark }} />
+          </h2>
+          <div>
+            <p className="section-subtitle">Opiniones reales de nuestros clientes en Google. Sus palabras, no las nuestras.</p>
+            <span className="google-stars">
+              <GoogleG />
+              <span className="google-stars-icons" aria-hidden="true">★★★★★</span>
+              <span>en Google</span>
+              <span className="sr-only">Valoración de 5 estrellas en Google</span>
+            </span>
+          </div>
         </div>
+
         <div className="testimonials-grid">
           {reviews.map((r, i) => (
-            <div key={i} className={`testimonial-card fade-in${i % 3 === 1 ? ' delay-1' : i % 3 === 2 ? ' delay-2' : ''}`}>
-              <div className="testimonial-stars">★★★★★</div>
-              <p className="testimonial-text">{r.text}</p>
-              <div className="testimonial-author">
-                <img
-                  src={r.img} alt={r.alt}
-                  style={{ width: 42, height: 42, borderRadius: '50%', objectFit: 'cover', objectPosition: r.pos, flexShrink: 0 }}
-                />
+            <figure key={r.name} className={`testimonial-card testimonial-card--${i + 1} fade-in${i % 3 === 1 ? ' delay-1' : i % 3 === 2 ? ' delay-2' : ''}`}>
+              <span className="testimonial-mark" aria-hidden="true">“</span>
+              <div className="testimonial-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+              <blockquote className="testimonial-text">{r.text}</blockquote>
+              <figcaption className="testimonial-author">
+                <span className="testimonial-avatar" aria-hidden="true">{r.name.charAt(0)}</span>
                 <div>
                   <div className="testimonial-name">{r.name}</div>
-                  <div className="testimonial-role">{r.role}</div>
+                  <div className="testimonial-role">Opinión de Google</div>
                 </div>
-              </div>
-            </div>
+              </figcaption>
+            </figure>
           ))}
+        </div>
+
+        <div className="testimonials-more">
+          <a href={GOOGLE_REVIEWS} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+            <GoogleG /> Ver todas las reseñas en Google
+          </a>
         </div>
       </div>
     </section>
