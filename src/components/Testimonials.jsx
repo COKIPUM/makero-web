@@ -33,7 +33,6 @@ export default function Testimonials() {
     <section className="section" style={{ background: 'var(--bg2)' }} id="testimonials">
       <div className="container">
         <div className="section-header">
-          <span className="badge">Clientes</span>
           <h2 className="section-title">Lo que dicen de MAKERO</h2>
           <p className="section-subtitle">Más de 300 clientes satisfechos avalan nuestro trabajo. Sus palabras, no las nuestras.</p>
         </div>

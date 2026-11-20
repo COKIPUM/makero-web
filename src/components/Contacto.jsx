@@ -14,13 +14,13 @@ let lastSubmit = 0
 const sanitize = str => str.replace(/<[^>]*>/g, '').trim().slice(0, 2000)
 
 const WaInfoIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--yellow)" style={{ filter: 'drop-shadow(0 0 6px rgba(233,173,73,0.4))', flexShrink: 0 }}>
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--yellow)" aria-hidden="true" style={{ flexShrink: 0 }}>
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
   </svg>
 )
 
 const InfoIcon = ({ d }) => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 6px rgba(233,173,73,0.4))', flexShrink: 0 }}>
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ flexShrink: 0 }}>
     <path d={d} />
   </svg>
 )
@@ -98,26 +98,21 @@ export default function Contacto() {
     <section className="section" id="contacto">
       <div className="container">
         <div className="section-header">
-          <span className="badge">Contacto</span>
-          <h2 className="section-title" style={{ color: 'var(--orange)' }}>Cuéntanos tu idea</h2>
+          <h2 className="section-title">Cuéntanos tu idea</h2>
           <p className="section-subtitle">Escríbenos y te respondemos en menos de 24h. Sin compromiso.</p>
         </div>
 
         <div className="contact-grid">
           {/* Info */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+          <div className="contact-info">
             {infoItems.map((item, i) => (
-              <div key={i} style={{
-                display: 'flex', gap: 16, alignItems: 'center',
-                background: 'var(--card-bg)', border: '1px solid var(--border)',
-                borderRadius: 'var(--radius-sm)', padding: '14px 18px',
-              }}>
+              <div key={i} className="contact-info-item">
                 {item.icon}
                 <div>
-                  <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--text-muted)', marginBottom: 4, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{item.title}</div>
+                  <div className="contact-info-title">{item.title}</div>
                   {item.href
-                    ? <a href={item.href} style={{ color: 'var(--text)', fontSize: 14, textDecoration: 'none' }}>{item.text}</a>
-                    : <div style={{ color: 'var(--text)', fontSize: 14 }}>{item.text}</div>}
+                    ? <a href={item.href} className="contact-info-text">{item.text}</a>
+                    : <div className="contact-info-text">{item.text}</div>}
                 </div>
               </div>
             ))}
@@ -125,14 +120,14 @@ export default function Contacto() {
 
           {/* Form */}
           {status === 'sent' ? (
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--card-bg)', border: '1px solid var(--border)', borderRadius: 'var(--radius)', padding: 40, textAlign: 'center' }}>
+            <div className="contact-sent" role="status">
               <div>
-                <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" strokeWidth="1.5" style={{ marginBottom: 20, display: 'block', margin: '0 auto 20px' }}>
+                <svg width="72" height="72" viewBox="0 0 24 24" fill="none" strokeWidth="1.8" aria-hidden="true">
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" strokeLinecap="round"/>
                   <path d="M22 4L12 14.01l-3-3" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <h3 style={{ fontFamily: 'Sora', fontSize: 22, fontWeight: 700, marginBottom: 8 }}>¡Mensaje enviado!</h3>
-                <p style={{ color: 'var(--text-muted)' }}>Te responderemos en menos de 24h.</p>
+                <h3>¡Mensaje enviado!</h3>
+                <p>Te responderemos en menos de 24h.</p>
               </div>
             </div>
           ) : (
@@ -147,7 +142,7 @@ export default function Contacto() {
                 style={{ display: 'none' }}
               />
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16 }}>
+              <div className="form-row">
                 <div className="form-group">
                   <label className="form-label">Nombre *</label>
                   <input name="name" className="form-input" required maxLength={100} value={form.name} onChange={handle} placeholder="Tu nombre" />
@@ -157,7 +152,7 @@ export default function Contacto() {
                   <input name="email" type="email" className="form-input" required maxLength={200} value={form.email} onChange={handle} placeholder="tu@email.com" />
                 </div>
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16 }}>
+              <div className="form-row">
                 <div className="form-group">
                   <label className="form-label">Teléfono *</label>
                   <input name="phone" className="form-input" required maxLength={20} value={form.phone} onChange={handle} placeholder="+34 600 000 000" />
@@ -178,28 +173,27 @@ export default function Contacto() {
 
               {/* Privacy checkbox */}
               <div className="form-group">
-                <label style={{ display: 'flex', alignItems: 'flex-start', gap: 10, cursor: 'pointer', fontSize: 13, color: 'var(--text-muted)', lineHeight: 1.5 }}>
+                <label className="form-check">
                   <input
                     type="checkbox"
                     required
                     checked={privacy}
                     onChange={e => setPrivacy(e.target.checked)}
-                    style={{ marginTop: 2, accentColor: 'var(--orange)', flexShrink: 0, width: 16, height: 16 }}
                   />
                   He leído y acepto la{' '}
-                  <a href="/privacidad" style={{ color: 'var(--orange)', textDecoration: 'underline' }}>política de privacidad</a>
+                  <a href="/privacidad">política de privacidad</a>
                   {' '}de MAKERO. *
                 </label>
               </div>
 
               {/* Error messages */}
               {status === 'error' && (
-                <p style={{ color: '#ff6b6b', fontSize: 13, textAlign: 'center' }}>
+                <p className="form-msg form-msg-error" role="alert">
                   Ha ocurrido un error. Por favor inténtalo de nuevo o escríbenos por WhatsApp.
                 </p>
               )}
               {status === 'rate' && (
-                <p style={{ color: 'var(--yellow)', fontSize: 13, textAlign: 'center' }}>
+                <p className="form-msg form-msg-wait" role="status">
                   Por favor espera unos segundos antes de volver a enviar.
                 </p>
               )}
@@ -212,7 +206,7 @@ export default function Contacto() {
               >
                 {status === 'sending' ? 'Enviando...' : 'Enviar mensaje'}
                 {status !== 'sending' && (
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                     <path d="M3 8H13M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 )}

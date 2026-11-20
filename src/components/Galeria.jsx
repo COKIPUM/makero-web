@@ -14,19 +14,18 @@ export default function Galeria() {
     <section className="section" id="proyectos">
       <div className="container">
         <div className="section-header">
-          <span className="badge">Nuestro trabajo</span>
-          <h2 className="section-title" style={{ color: 'var(--yellow)' }}>Proyectos destacados</h2>
+          <h2 className="section-title">Proyectos destacados</h2>
           <p className="section-subtitle">Una selección de lo que somos capaces de crear. Cada pieza, una historia.</p>
         </div>
         <div className="gallery-grid">
           {items.map(item => (
             <div key={item.id} className={`gallery-item gallery-item-${item.id} fade-in`}>
               {item.isImg ? (
-                <div className="gallery-thumb" style={{ background: '#1a1e28', padding: 0, overflow: 'hidden' }}>
+                <div className="gallery-thumb">
                   <img
                     src={item.bg}
                     alt={item.name}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', background: '#1a1e28', display: 'block', borderRadius: 16 }}
+                    loading="lazy"
                   />
                 </div>
               ) : (

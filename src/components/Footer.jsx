@@ -19,14 +19,13 @@ export default function Footer() {
             <p className="footer-tagline">
               Diseño e impresión 3D personalizada. Tú pides, nosotros lo creamos. Así de fácil.
             </p>
-            <div style={{ display: 'flex', gap: 10 }}>
+            <div className="footer-socials">
               {[
                 { href: 'https://instagram.com/makero3d', label: 'Instagram' },
                 { href: 'https://tiktok.com/@makero3d', label: 'TikTok' },
                 { href: WA, label: 'WhatsApp' },
               ].map(s => (
-                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                  style={{ padding: '8px 14px', background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 8, fontSize: 12, color: 'var(--text-muted)', textDecoration: 'none', transition: 'var(--transition)' }}>
+                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer">
                   {s.label}
                 </a>
               ))}
@@ -64,7 +63,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <span>© {year} MAKERO · Todos los derechos reservados</span>
-          <span>Hecho con ❤️ en el centro geográfico de Andalucía</span>
+          <span>Hecho con cariño en el centro geográfico de Andalucía</span>
         </div>
       </div>
     </footer>

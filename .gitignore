@@ -3,3 +3,7 @@ dist
 .env
 .env.local
 .DS_Store
+
+# Hallmark / Claude local
+.hallmark/
+.claude/

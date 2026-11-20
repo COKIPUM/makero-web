@@ -5,7 +5,7 @@ export default function Cookies() {
         <a href="/" style={{ color: 'var(--orange)', textDecoration: 'none', fontSize: 14, display: 'inline-flex', alignItems: 'center', gap: 6, marginBottom: 40 }}>
           ← Volver a inicio
         </a>
-        <h1 style={{ fontFamily: 'Sora', fontSize: 36, fontWeight: 800, marginBottom: 8 }}>Política de Cookies</h1>
+        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 40, fontWeight: 400, lineHeight: 1.05, marginBottom: 8 }}>Política de Cookies</h1>
         <p style={{ color: 'var(--text-muted)', marginBottom: 48 }}>Última actualización: mayo 2026</p>
 
         {[
@@ -31,7 +31,7 @@ export default function Cookies() {
           },
         ].map(s => (
           <div key={s.title} style={{ marginBottom: 40 }}>
-            <h2 style={{ fontFamily: 'Sora', fontSize: 20, fontWeight: 700, marginBottom: 12, color: 'var(--orange)' }}>{s.title}</h2>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 22, fontWeight: 400, marginBottom: 12, color: 'var(--orange)' }}>{s.title}</h2>
             <p style={{ color: 'var(--text-muted)', lineHeight: 1.8 }}>{s.content}</p>
           </div>
         ))}
