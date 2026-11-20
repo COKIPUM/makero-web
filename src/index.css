@@ -598,7 +598,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   background: var(--card-bg);
   border: var(--diecut) solid var(--white);
   border-radius: var(--radius);
-  box-shadow: 5px 6px 0 var(--band);
+  border-color: var(--band);
+  box-shadow: 5px 6px 0 var(--white);
   padding: 0 clamp(20px, 2.2vw, 26px) clamp(18px, 2vw, 22px);
   display: flex; flex-direction: column;
   overflow: hidden;
