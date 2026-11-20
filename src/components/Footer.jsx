@@ -63,7 +63,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <span>© {year} MAKERO · Todos los derechos reservados</span>
-          <span>Hecho con cariño en el centro geográfico de Andalucía</span>
+          <span>Hecho con <span className="footer-heart" role="img" aria-label="cariño">♥</span> en el centro geográfico de Andalucía</span>
         </div>
       </div>
     </footer>
