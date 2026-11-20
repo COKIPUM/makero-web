@@ -374,6 +374,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   display: inline-block;
   color: var(--yellow);
   text-shadow: 3px 4px 0 var(--orange);
+  -webkit-text-stroke: 1px var(--white);
+  paint-order: stroke fill;
   rotate: -3deg;
   translate: 0 -2px;
 }
