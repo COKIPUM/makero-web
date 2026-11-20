@@ -570,7 +570,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .creamos-cta {
   display: flex; align-items: center; justify-content: space-between; gap: 28px;
   margin-top: clamp(56px, 6vw, 84px);
-  background: var(--orange); color: var(--ink);
+  background: var(--yellow); color: var(--ink);
   border: var(--diecut) solid var(--white);
   border-radius: 22px;
   box-shadow: 6px 7px 0 var(--blue);

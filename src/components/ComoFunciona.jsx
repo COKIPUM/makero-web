@@ -45,8 +45,8 @@ export default function ComoFunciona() {
         {/* Llamada final: invita a dar el paso 1 */}
         <div className="creamos-cta fade-in">
           <div>
-            <p className="creamos-cta-title">¿Empezamos con la tuya?</p>
-            <p className="creamos-cta-text">El paso 1 es tuyo: cuéntanos tu idea y te respondemos en menos de 24h.</p>
+            <p className="creamos-cta-title">¿Empezamos ya?</p>
+            <p className="creamos-cta-text">El paso 1 es tuyo: cuéntanos tu idea y te responderemos en menos de 24 horas.</p>
           </div>
           <a href={WA} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp btn-hero">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
