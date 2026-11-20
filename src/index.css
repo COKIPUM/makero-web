@@ -372,7 +372,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   color: var(--white);
   text-shadow: 3px 4px 0 var(--ink);
 }
-.services-side--empresas .services-side-title { color: var(--yellow); }
+.services-side--empresas .services-side-title { color: var(--orange); }
 .services-list { list-style: none; display: flex; flex-direction: column; }
 .services-list li {
   padding: 16px 0;
