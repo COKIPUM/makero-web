@@ -37,7 +37,7 @@ export default function Redes() {
       <div className="container">
         <div className="socials-inner">
           <h2 className="socials-title">
-            Nos encontrarás <span className="title-sticker title-sticker--white">aquí</span>
+            Nos encontrarás aquí
           </h2>
           <a className="socials-handle" href="https://instagram.com/makero3d" target="_blank" rel="noopener noreferrer">
             @makero3d
