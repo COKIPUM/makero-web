@@ -322,34 +322,68 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(18px, 2.4vw, 30px);
+  gap: clamp(40px, 4vw, 52px) clamp(22px, 2.6vw, 34px);
+  padding-top: 26px;
 }
 .service-card {
+  --accent: var(--orange);
   background: var(--card-bg);
   border: var(--diecut) solid var(--white);
   border-radius: var(--radius);
   box-shadow: var(--shadow-card);
-  padding: clamp(20px, 2.2vw, 30px);
+  padding: clamp(52px, 4.6vw, 60px) clamp(20px, 2.2vw, 30px) clamp(22px, 2.2vw, 30px);
   position: relative;
-  transition: translate var(--dur-micro) var(--ease-out), rotate var(--dur-micro) var(--ease-out);
+  overflow: visible;
+  isolation: isolate;
+  transition: translate var(--dur-micro) var(--ease-out), rotate var(--dur-micro) var(--ease-out), background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out);
 }
-.service-card:nth-child(odd)  { rotate: -0.8deg; }
-.service-card:nth-child(even) { rotate: 0.8deg; }
-.service-card:hover { translate: 0 -3px; rotate: 0deg; }
+/* acentos en ritmo diagonal */
+.service-card:nth-child(1) { --accent: var(--orange); rotate: -1.2deg; }
+.service-card:nth-child(2) { --accent: var(--yellow); rotate: 0.8deg; }
+.service-card:nth-child(3) { --accent: var(--blue-light); rotate: -0.6deg; }
+.service-card:nth-child(4) { --accent: var(--orange); rotate: 0.9deg; }
+.service-card:nth-child(5) { --accent: var(--yellow); rotate: -1deg; }
+.service-card:nth-child(6) { --accent: var(--blue-light); rotate: 0.7deg; }
+
+/* el icono, pegado sobre la esquina */
 .service-icon {
-  width: 56px; height: 56px;
-  border-radius: 50%;
+  position: absolute; top: -30px; left: 22px;
+  width: 68px; height: 68px;
+  border-radius: 20px;
   display: flex; align-items: center; justify-content: center;
-  margin-bottom: 18px;
-  background: var(--blue);
-  border: 4px solid var(--white);
+  background: var(--accent);
+  border: 5px solid var(--white);
+  box-shadow: 4px 5px 0 var(--blue);
+  rotate: -8deg;
+  transition: rotate var(--dur-micro) var(--ease-out);
 }
-.service-icon svg { width: 24px; height: 24px; stroke-width: 2; fill: none; stroke: var(--ink); }
-.service-icon.glow-orange, .service-icon.glow-orange-strong { background: var(--orange); }
-.service-icon.glow-yellow { background: var(--yellow); }
-.service-icon.glow-blue   { background: var(--blue-light); }
-.service-title { font: 400 var(--text-xl)/1.1 var(--font-display); margin-bottom: 10px; }
-.service-desc  { font-size: var(--text-sm); color: var(--text-muted); line-height: 1.55; }
+.service-card:nth-child(even) .service-icon { rotate: 7deg; }
+.service-icon svg { width: 30px; height: 30px; stroke-width: 2; fill: none; stroke: var(--ink); }
+
+/* número grande en contorno */
+.service-num {
+  position: absolute; top: 10px; right: 18px; z-index: -1;
+  font: 400 clamp(64px, 6vw, 92px)/1 var(--font-display);
+  color: transparent;
+  -webkit-text-stroke: 2px var(--accent);
+  opacity: 0.55;
+  pointer-events: none;
+}
+.service-title { font: 400 var(--text-xl)/1.1 var(--font-display); margin-bottom: 10px; max-width: 16ch; }
+.service-desc  { font-size: var(--text-sm); color: var(--text-muted); line-height: 1.55; max-width: 34ch; }
+
+/* dos tarjetas rellenas, en zigzag */
+.service-card:nth-child(1), .service-card:nth-child(5) { background: var(--accent); color: var(--ink); }
+.service-card:nth-child(1) .service-desc, .service-card:nth-child(5) .service-desc { color: var(--ink); }
+.service-card:nth-child(1) .service-icon, .service-card:nth-child(5) .service-icon { background: var(--card-bg); }
+.service-card:nth-child(1) .service-icon svg, .service-card:nth-child(5) .service-icon svg { stroke: var(--accent); }
+.service-card:nth-child(1) .service-num, .service-card:nth-child(5) .service-num { -webkit-text-stroke-color: var(--ink); opacity: 0.25; }
+
+/* hover: la tarjeta oscura se rellena de su color */
+.service-card:hover { translate: 0 -4px; rotate: 0deg; background: var(--accent); color: var(--ink); }
+.service-card:hover .service-desc { color: var(--ink); }
+.service-card:hover .service-num { -webkit-text-stroke-color: var(--ink); opacity: 0.25; }
+.service-card:hover .service-icon { rotate: 0deg; }
 
 /* ─────────────────────────────────────────
    GALLERY

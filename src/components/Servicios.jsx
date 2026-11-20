@@ -51,7 +51,8 @@ export default function Servicios() {
               key={i}
               className={`service-card fade-in${i % 3 === 1 ? ' delay-1' : i % 3 === 2 ? ' delay-2' : ''}`}
             >
-              <div className={`service-icon ${s.glow}`}>{s.svg}</div>
+              <div className="service-icon">{s.svg}</div>
+              <span className="service-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
               <h3 className="service-title">{s.title}</h3>
               <p className="service-desc">{s.desc}</p>
             </div>
