@@ -37,8 +37,8 @@ export default function Footer() {
             <h4 className="footer-heading">Makero</h4>
             <ul className="footer-links">
               <li><a href="#servicios">Servicios creativos</a></li>
-              <li><a href="#promociones">Descuentos</a></li>
               <li><a href="#como-funciona">Procesos</a></li>
+              <li><a href="#promociones">Descuentos</a></li>
               <li><a href="#testimonials">Clientes</a></li>
               <li><a href="#redes">Redes sociales</a></li>
             </ul>

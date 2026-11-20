@@ -24,9 +24,9 @@ function Home() {
       <div className="divider" />
       <Galeria />
       <div className="divider" />
-      <Promociones />
-      <div className="divider" />
       <ComoFunciona />
+      <div className="divider" />
+      <Promociones />
       <div className="divider" />
       <Testimonials />
       <div className="divider" />
