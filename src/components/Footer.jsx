@@ -13,7 +13,7 @@ export default function Footer() {
           <div>
             <div className="footer-logo">
               {logoMakeroFooter
-                ? <img src={logoMakeroFooter} alt="MAKERO" style={{ height: 28 }} />
+                ? <img src={logoMakeroFooter} alt="MAKERO" style={{ height: 38 }} />
                 : <><span>MAKE</span>RO</>}
             </div>
             <p className="footer-tagline">
@@ -21,11 +21,11 @@ export default function Footer() {
             </p>
             <div className="footer-socials">
               {[
-                { href: 'https://instagram.com/makero3d', label: 'Instagram' },
-                { href: 'https://tiktok.com/@makero3d', label: 'TikTok' },
-                { href: WA, label: 'WhatsApp' },
+                { href: 'https://instagram.com/makero3d', label: 'Instagram', cls: 'ig' },
+                { href: 'https://tiktok.com/@makero3d', label: 'TikTok', cls: 'tt' },
+                { href: WA, label: 'WhatsApp', cls: 'wa' },
               ].map(s => (
-                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer">
+                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className={`footer-social footer-social--${s.cls}`}>
                   {s.label}
                 </a>
               ))}
