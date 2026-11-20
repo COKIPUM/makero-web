@@ -855,6 +855,7 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-thicknes
 .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .footer-links a { font-size: var(--text-sm); color: var(--text-muted); text-decoration: none; }
 .footer-links a:hover { color: var(--text); text-decoration: underline; text-decoration-color: var(--orange); text-decoration-thickness: 2px; }
+.footer-heart { color: var(--orange); font-size: 1.25em; line-height: 1; vertical-align: -0.08em; }
 .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: var(--space-md); border-top: 2px dashed var(--rule); font-size: var(--text-xs); color: var(--text-muted); }
 
 /* ─────────────────────────────────────────
