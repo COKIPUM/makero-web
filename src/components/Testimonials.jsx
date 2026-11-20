@@ -44,15 +44,14 @@ export default function Testimonials() {
         <div className="testimonials-grid">
           {reviews.map((r, i) => (
             <figure key={r.name} className={`testimonial-card testimonial-card--${i + 1} fade-in${i % 3 === 1 ? ' delay-1' : i % 3 === 2 ? ' delay-2' : ''}`}>
-              <span className="testimonial-mark" aria-hidden="true">“</span>
-              <div className="testimonial-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+              <div className="testimonial-band">
+                <span className="testimonial-stars" aria-label="5 de 5 estrellas">★★★★★</span>
+                <GoogleG />
+              </div>
               <blockquote className="testimonial-text">{r.text}</blockquote>
               <figcaption className="testimonial-author">
-                <span className="testimonial-avatar" aria-hidden="true">{r.name.charAt(0)}</span>
-                <div>
-                  <div className="testimonial-name">{r.name}</div>
-                  <div className="testimonial-role">Opinión de Google</div>
-                </div>
+                <span className="testimonial-name">{r.name}</span>
+                <span className="testimonial-role">Opinión de Google</span>
               </figcaption>
             </figure>
           ))}

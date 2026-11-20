@@ -569,14 +569,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   vertical-align: -0.08em;
   height: 0.95em;
   rotate: -4deg;
-  filter: drop-shadow(3px 4px 0 var(--yellow));
+  filter: drop-shadow(3px 4px 0 var(--orange));
 }
 .makero-wordmark svg { height: 100%; width: auto; display: block; overflow: visible; }
-.makero-wordmark .mk-a { color: var(--orange); }
-.makero-wordmark .mk-b { color: var(--yellow); }
-.makero-wordmark svg g { color: var(--orange); }
-.makero-wordmark .mk-a { fill: var(--orange); }
-.makero-wordmark .mk-b { fill: var(--yellow); }
+.makero-wordmark .mk-a, .makero-wordmark .mk-b { fill: var(--white); }
 
 .google-stars {
   display: inline-flex; align-items: center; gap: 8px;
@@ -588,52 +584,41 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   box-shadow: 3px 4px 0 var(--orange);
   rotate: -2deg;
 }
-.google-stars-icons { color: var(--yellow); letter-spacing: 1px; font-size: 1.1em; -webkit-text-stroke: 0.5px var(--ink); }
+.google-stars-icons { color: #F4B400; letter-spacing: 1px; font-size: 1.15em; }
 
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(40px, 4vw, 52px) clamp(22px, 2.4vw, 32px);
-  padding-top: 22px;
+  gap: clamp(26px, 3vw, 36px);
 }
 .testimonial-card {
+  --band: var(--orange);
   position: relative;
   margin: 0;
   background: var(--card-bg);
   border: var(--diecut) solid var(--white);
   border-radius: var(--radius);
   box-shadow: var(--shadow-card);
-  padding: clamp(30px, 2.8vw, 38px) clamp(22px, 2.4vw, 30px) clamp(20px, 2.2vw, 26px);
+  padding: 0 clamp(20px, 2.2vw, 26px) clamp(18px, 2vw, 22px);
   display: flex; flex-direction: column;
+  overflow: hidden;
 }
 .testimonial-card:nth-child(odd)  { rotate: -0.8deg; }
 .testimonial-card:nth-child(even) { rotate: 0.8deg; }
-.testimonial-mark {
-  position: absolute; top: -28px; left: 20px;
-  width: 54px; height: 54px; border-radius: 50%;
-  display: grid; place-items: center;
-  border: 5px solid var(--white);
-  box-shadow: 3px 4px 0 var(--ink);
-  font: 400 46px/1 var(--font-display); color: var(--ink);
-  padding-top: 18px;
-  background: var(--orange);
+.testimonial-card--2, .testimonial-card--6 { --band: var(--yellow); }
+.testimonial-card--3, .testimonial-card--4 { --band: var(--blue-light); }
+/* cinta de color con las estrellas */
+.testimonial-band {
+  display: flex; align-items: center; justify-content: space-between;
+  margin: 0 calc(-1 * clamp(20px, 2.2vw, 26px)) 16px;
+  padding: 12px clamp(20px, 2.2vw, 26px);
+  background: var(--band);
 }
-.testimonial-card--2 .testimonial-mark, .testimonial-card--4 .testimonial-mark { background: var(--yellow); }
-.testimonial-card--3 .testimonial-mark, .testimonial-card--6 .testimonial-mark { background: var(--blue-light); }
-.testimonial-stars { color: var(--yellow); font-size: var(--text-lg); margin-bottom: var(--space-sm); letter-spacing: 2px; }
+.testimonial-stars { color: var(--ink); font-size: var(--text-lg); letter-spacing: 2px; line-height: 1; }
 .testimonial-text  { margin: 0 0 var(--space-md); font-size: var(--text-base); color: var(--text); line-height: 1.6; flex: 1; }
-.testimonial-author { display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 2px dashed var(--rule); }
-.testimonial-avatar {
-  width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%;
-  display: grid; place-items: center;
-  font: 400 20px/1 var(--font-display); color: var(--ink);
-  border: 3px solid var(--white);
-  background: var(--orange);
-}
-.testimonial-card--2 .testimonial-avatar, .testimonial-card--4 .testimonial-avatar { background: var(--yellow); }
-.testimonial-card--3 .testimonial-avatar, .testimonial-card--6 .testimonial-avatar { background: var(--blue-light); }
+.testimonial-author { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 14px; border-top: 2px dashed var(--rule); }
 .testimonial-name  { font-size: var(--text-sm); font-weight: 800; }
-.testimonial-role  { font-size: var(--text-xs); color: var(--text-muted); margin-top: 2px; }
+.testimonial-role  { font-size: var(--text-xs); color: var(--text-muted); }
 .testimonials-more { display: flex; justify-content: center; margin-top: clamp(36px, 4vw, 52px); }
 .testimonials-more .btn { background: var(--white); color: var(--ink); box-shadow: 0 0 0 0 transparent, var(--shadow-card); }
 .testimonials-more .btn:hover { background: var(--yellow); translate: -1px -2px; }
