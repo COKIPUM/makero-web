@@ -223,6 +223,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .section-header:has(.title-sticker--orange),
 .section-header:has(.title-sticker--makero) { --bar: var(--orange); }
 .section-header:has(.title-sticker--blue)   { --bar: var(--blue-light); }
+/* Escritorio: el título en una sola línea; la frase ocupa lo que quede a la derecha */
+@media (min-width: 1100px) {
+  .section-header { grid-template-columns: max-content minmax(0, 1fr); }
+  .section-title { white-space: nowrap; }
+  .section-header .section-subtitle, .testimonials-intro { justify-self: end; }
+}
 .section-title, .about-title, .hero-title, .promo-discount, .stat-number, .about-stat-number {
   font-family: var(--font-display);
   font-weight: 400;
@@ -608,7 +614,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* MAKERO en el título: misma letra, naranja con sombra azul, inclinado como pegatina */
 .title-sticker--makero { color: var(--orange); text-shadow: 3px 4px 0 var(--blue); rotate: -4deg; }
 /* «Lo que dicen de» arriba y MAKERO debajo, más grande */
-.testimonials-title { display: flex; flex-direction: column; align-items: flex-start; }
+.testimonials-title { display: flex; flex-direction: column; align-items: center; width: fit-content; }
 .testimonials-title .title-sticker--makero { font-size: 1.45em; line-height: 1; margin-top: 0.08em; translate: 0 0; }
 
 .testimonials-intro { display: flex; flex-direction: column; }
