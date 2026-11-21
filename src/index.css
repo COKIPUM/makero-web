@@ -232,6 +232,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   #testimonials .section-header { grid-template-columns: max-content minmax(0, 440px); justify-content: center; column-gap: clamp(56px, 6vw, 96px); }
   #testimonials .testimonials-intro { justify-self: start; }
 }
+/* Nosotros en escritorio: título centrado en su columna, párrafos en su sitio */
+@media (min-width: 769px) {
+  .about-title { text-align: center; }
+}
 .section-title, .about-title, .hero-title, .promo-discount, .stat-number, .about-stat-number {
   font-family: var(--font-display);
   font-weight: 400;
