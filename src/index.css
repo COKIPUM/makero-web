@@ -593,7 +593,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    TESTIMONIALS
 ───────────────────────────────────────── */
 /* MAKERO en el título: misma letra, naranja con sombra azul, inclinado como pegatina */
-.title-sticker--makero { color: var(--orange); text-shadow: 3px 4px 0 var(--blue); rotate: -4deg; }
+.title-sticker--makero { color: var(--orange); text-shadow: 3px 4px 0 var(--blue); rotate: -4deg; translate: 0 0.14em; }
 
 .google-stars {
   display: inline-flex; align-items: center; gap: 8px;
@@ -804,6 +804,7 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-thicknes
   --k-bg: var(--yellow); --k-edge: var(--yellow-edge);
   padding: 13px 19px;
   border-radius: var(--radius-pill);
+  rotate: 8deg;
 }
 .contact-form .btn-primary { font: 400 clamp(15px, 1.25vw, 17px)/1 var(--font-display); min-height: 58px; }
 .form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
