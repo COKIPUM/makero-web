@@ -915,8 +915,18 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-thicknes
 }
 
 @media (max-width: 768px) {
-  .section-header { grid-template-columns: minmax(0, 1fr); gap: 18px; margin-bottom: 40px; }
-  .section-subtitle { font-size: 17px; padding-left: 14px; border-left-width: 5px; }
+  /* Móvil: cabeceras centradas; la palabra-pegatina en su propia línea
+     y la barra de color pasa a ser una raya corta encima de la frase. */
+  .section-header { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; gap: 22px; margin-bottom: 40px; }
+  .section-title .title-sticker { display: block; width: fit-content; margin: 6px auto 0; }
+  .section-subtitle { font-size: 17px; border-left: 0; padding-left: 0; margin-inline: auto; }
+  .section-subtitle::before { content: ""; display: block; width: 56px; height: 5px; border-radius: 3px; background: var(--bar, var(--yellow)); margin: 0 auto 14px; }
+  .testimonials-intro { align-items: center; }
+  .about-text { text-align: center; }
+  .about-title .title-sticker { margin-top: 4px; }
+  .about-body { border-left: 0; padding-left: 0; }
+  .about-body::before { content: ""; display: block; width: 56px; height: 5px; border-radius: 3px; background: var(--orange); margin: 0 auto 16px; }
+  .about-desc { margin-inline: auto; }
   .services-duo { grid-template-columns: minmax(0, 1fr); gap: 52px; }
   .testimonials-grid { grid-template-columns: minmax(0, 1fr); }
   .testimonial-card:nth-child(n+4) { display: none; }
