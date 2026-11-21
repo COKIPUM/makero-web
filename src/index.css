@@ -14,6 +14,7 @@
   /* Marca */
   --orange: #EA7A47;
   --orange-deep: #D2663A;
+  --orange-edge: #A84C24;   /* canto de los botones-tecla */
   --yellow: #E9AD49;
   --blue:   #486287;
   --blue-light: #9DB4D4;
@@ -35,6 +36,7 @@
   --instagram: #E1306C;
   --whatsapp:  #25D366;
   --whatsapp-deep: #1FB457;
+  --whatsapp-edge: #138A40;
   --google-star: #F4B400;
 
   /* Tipografía */
@@ -153,21 +155,20 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   transition: translate var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out), background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out);
 }
 .btn svg { flex-shrink: 0; }
-.btn-primary {
-  background: var(--orange);
+/* Botones de acción = teclas: rectos, sin filo blanco, con canto oscuro debajo.
+   (Las pegatinas con filo blanco quedan para redes, etiquetas y títulos.) */
+.btn-primary, .btn-whatsapp {
+  --key: 7px;
   color: var(--ink);
-  box-shadow: 0 0 0 5px var(--white), var(--shadow-card);
+  box-shadow: 0 var(--key) 0 var(--edge);
 }
-.btn-primary:hover { background: var(--orange-deep); translate: -1px -2px; }
-.btn-primary:active { translate: 4px 5px; box-shadow: 0 0 0 5px var(--white), var(--shadow-press); }
+.btn-primary  { background: var(--orange);   --edge: var(--orange-edge); }
+.btn-whatsapp { background: var(--whatsapp); --edge: var(--whatsapp-edge); }
+.btn-primary:hover  { background: var(--orange-deep); }
+.btn-whatsapp:hover { background: var(--whatsapp-deep); }
+.btn-primary:hover, .btn-whatsapp:hover { translate: 0 -2px; box-shadow: 0 calc(var(--key) + 2px) 0 var(--edge); }
+.btn-primary:active, .btn-whatsapp:active { translate: 0 calc(var(--key) - 2px); box-shadow: 0 2px 0 var(--edge); }
 .btn-primary:disabled { cursor: progress; }
-.btn-whatsapp {
-  background: var(--whatsapp);
-  color: var(--ink);
-  box-shadow: 0 0 0 4px var(--white), var(--shadow-card);
-}
-.btn-whatsapp:hover { background: var(--whatsapp-deep); translate: -1px -2px; }
-.btn-whatsapp:active { translate: 4px 5px; box-shadow: 0 0 0 4px var(--white), var(--shadow-press); }
 /* botones principales: letra de títulos e icono grande */
 .btn-hero {
   min-height: 58px;
@@ -176,7 +177,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font: 400 clamp(15px, 1.25vw, 17px)/1 var(--font-display);
   letter-spacing: 0.01em;
 }
-.btn-hero--nav { min-height: 44px; padding: 0 20px; gap: 8px; font-size: 14px; }
+.btn-hero--nav { min-height: 44px; padding: 0 20px; gap: 8px; font-size: 14px; --key: 5px; }
 .btn-ghost { color: var(--text); }
 .btn-ghost:hover { background: var(--white); color: var(--ink); }
 .btn-ghost:active { translate: 1px 1px; }
@@ -582,7 +583,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .creamos-cta-title { font: 400 clamp(26px, 3vw, 40px)/1.02 var(--font-display); }
 .creamos-cta-text { font-weight: 700; font-size: var(--text-base); margin-top: 8px; max-width: 46ch; }
-.creamos-cta .btn-whatsapp { flex-shrink: 0; box-shadow: 0 0 0 5px var(--white), 5px 6px 0 var(--ink); }
+.creamos-cta .btn-whatsapp { flex-shrink: 0; }
 .step-title { font: 400 var(--text-lg)/1.1 var(--font-display); margin-bottom: 10px; }
 .step-desc  { font-size: var(--text-sm); color: var(--text-muted); line-height: 1.55; max-width: 28ch; margin-inline: auto; }
 
