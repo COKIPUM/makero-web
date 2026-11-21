@@ -404,19 +404,23 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .services-side:hover { translate: 0 -4px; rotate: 0deg; }
 
 .services-tag {
-  position: absolute; top: -26px; left: 28px;
+  position: absolute; top: -26px; left: 50%; translate: -50% 0; white-space: nowrap;
   font: 400 clamp(17px, 1.5vw, 21px)/1 var(--font-display);
   --k-bg: var(--yellow); --k-edge: var(--yellow-edge);
   padding: 14px 22px;
   border-radius: var(--radius-pill);
 }
+.services-side { text-align: center; }
 .services-side-title {
   font: 400 clamp(32px, 3.5vw, 50px)/1.02 var(--font-display);
-  margin: 6px 0 clamp(18px, 2vw, 26px);
+  margin: 6px 0 4px;
+  padding-bottom: clamp(16px, 1.8vw, 22px);
+  border-bottom: 5px solid var(--ink);   /* línea gruesa: separa el título de los servicios */
   color: var(--white);
   text-shadow: 3px 4px 0 var(--ink);
 }
-.services-side--empresas .services-side-title { color: var(--orange); }
+.services-side--empresas .services-side-title { color: var(--orange); border-bottom-color: var(--orange); }
+.services-list li:first-child { border-top: 0; }
 .services-list { list-style: none; display: flex; flex-direction: column; }
 .services-list li {
   padding: 16px 0;
