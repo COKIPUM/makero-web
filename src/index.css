@@ -204,14 +204,22 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 ───────────────────────────────────────── */
 .section     { padding-block: var(--space-2xl); }
 .section-sm  { padding-block: var(--space-xl); }
+/* Cabecera de apartado: frase con barra del color de la palabra-pegatina
+   y línea de corte discontinua que la separa del contenido. */
 .section-header {
+  --bar: var(--yellow);
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
   align-items: end;
   gap: var(--space-md) var(--space-xl);
   margin-bottom: var(--space-xl);
+  padding-bottom: clamp(24px, 3vw, 36px);
+  border-bottom: 3px dashed rgba(240, 242, 245, 0.28);
   text-align: left;
 }
+.section-header:has(.title-sticker--orange),
+.section-header:has(.title-sticker--makero) { --bar: var(--orange); }
+.section-header:has(.title-sticker--blue)   { --bar: var(--blue-light); }
 .section-title, .about-title, .hero-title, .promo-discount, .stat-number, .about-stat-number {
   font-family: var(--font-display);
   font-weight: 400;
@@ -223,8 +231,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   color: var(--text);
 }
 .section-subtitle {
-  font-size: var(--text-lg); color: var(--text-muted);
-  max-width: 38ch; line-height: 1.5;
+  font-size: var(--text-lg); color: var(--text); font-weight: 700;
+  max-width: 38ch; line-height: 1.45;
+  border-left: 6px solid var(--bar, var(--yellow));
+  padding-left: 18px;
 }
 
 /* ─────────────────────────────────────────
@@ -661,6 +671,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   margin-bottom: var(--space-md);
 }
 .about-desc  { font-size: var(--text-base); color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-md); max-width: 54ch; }
+/* Nosotros: misma barra que las cabeceras, a lo largo de los párrafos */
+.about-body { border-left: 6px solid var(--orange); padding-left: 18px; }
+.about-body .about-desc:first-child { color: var(--text); font-weight: 700; }
+.about-body .about-desc:last-child { margin-bottom: 0; }
 .about-card  { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(16px, 2vw, 24px); }
 .about-stat {
   border: var(--diecut) solid var(--white);
@@ -896,7 +910,8 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-thicknes
 }
 
 @media (max-width: 768px) {
-  .section-header { grid-template-columns: minmax(0, 1fr); }
+  .section-header { grid-template-columns: minmax(0, 1fr); gap: 18px; margin-bottom: 40px; padding-bottom: 24px; }
+  .section-subtitle { font-size: 17px; padding-left: 14px; border-left-width: 5px; }
   .services-duo { grid-template-columns: minmax(0, 1fr); gap: 52px; }
   .testimonials-grid { grid-template-columns: minmax(0, 1fr); }
   .testimonial-card:nth-child(n+4) { display: none; }

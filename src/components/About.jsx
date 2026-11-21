@@ -8,6 +8,7 @@ export default function About() {
               Convertimos <span className="title-sticker">ideas</span> en objetos{' '}
               <span className="title-sticker title-sticker--orange">reales</span>
             </h2>
+            <div className="about-body">
             <p className="about-desc">
               MAKERO nació del amor por la tecnología y el diseño. Somos un estudio creativo especializado en impresión personalizada, con un equipo apasionado que entiende que cada proyecto es único.
             </p>
@@ -17,6 +18,7 @@ export default function About() {
             <p className="about-desc">
               No somos una fábrica. Somos un equipo que trata cada encargo como si fuera propio.
             </p>
+            </div>
           </div>
 
           <div className="about-visual fade-in delay-2">
