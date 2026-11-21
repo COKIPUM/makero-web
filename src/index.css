@@ -16,7 +16,10 @@
   --orange-deep: #D2663A;
   --orange-edge: #A84C24;   /* canto de los botones-tecla */
   --yellow: #E9AD49;
+  --yellow-edge: #A97824;
   --blue:   #486287;
+  --blue-edge: #2B3D58;
+  --white-edge: #9AA3B1;
   --blue-light: #9DB4D4;
 
   /* Superficies (vinyl) */
@@ -328,19 +331,25 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   rotate: -2deg;
 }
 .hero-3d-main video { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Teclas: etiquetas y botones rectos sin filo blanco, con canto oscuro debajo.
+   Cada una pone su color en --k-bg y su canto en --k-edge. */
+.hero-tag, .services-tag, .gallery-name, .step-done, .google-stars, .testimonials-more .btn, .ticket-stamp {
+  background: var(--k-bg); color: var(--k-fg, var(--ink));
+  border: 0;
+  box-shadow: 0 var(--k-depth, 6px) 0 var(--k-edge);
+  rotate: 0deg;
+}
+
 .hero-tag {
   position: absolute;
-  border: 5px solid var(--white);
   border-radius: var(--radius-pill);
-  box-shadow: 4px 5px 0 var(--blue);
-  padding: 10px 18px;
+  padding: 14px 22px;
   font: 400 clamp(13px, 1.2vw, 17px)/1 var(--font-display);
-  color: var(--ink);
   white-space: nowrap;
 }
-.hero-tag-1 { top: -18px; right: -14px; background: var(--orange); rotate: 6deg; }
-.hero-tag-2 { bottom: 64px; left: -34px; background: var(--yellow); rotate: -5deg; }
-.hero-tag-3 { bottom: -16px; right: 30px; background: var(--white); border-color: var(--blue); box-shadow: 4px 5px 0 var(--orange); rotate: 3deg; }
+.hero-tag-1 { top: -18px; right: -14px; --k-bg: var(--orange); --k-edge: var(--orange-edge); }
+.hero-tag-2 { bottom: 64px; left: -34px; --k-bg: var(--yellow); --k-edge: var(--yellow-edge); }
+.hero-tag-3 { bottom: -16px; right: 30px; --k-bg: var(--blue); --k-edge: var(--blue-edge); --k-fg: var(--white); }
 
 /* ─────────────────────────────────────────
    SERVICES
@@ -371,14 +380,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .services-tag {
   position: absolute; top: -26px; left: 28px;
   font: 400 clamp(17px, 1.5vw, 21px)/1 var(--font-display);
-  background: var(--yellow); color: var(--ink);
-  padding: 10px 18px;
-  border: 5px solid var(--white);
+  --k-bg: var(--yellow); --k-edge: var(--yellow-edge);
+  padding: 14px 22px;
   border-radius: var(--radius-pill);
-  box-shadow: 3px 4px 0 var(--ink);
-  rotate: -4deg;
 }
-.services-side--empresas .services-tag { rotate: 3deg; }
 .services-side-title {
   font: 400 clamp(32px, 3.5vw, 50px)/1.02 var(--font-display);
   margin: 6px 0 clamp(18px, 2vw, 26px);
@@ -427,9 +432,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   background: var(--card-bg);
   transition: translate var(--dur-micro) var(--ease-out), rotate var(--dur-micro) var(--ease-out);
 }
-.gallery-item--orange { --c: var(--orange); --on-c: var(--ink); }
-.gallery-item--yellow { --c: var(--yellow); --on-c: var(--ink); }
-.gallery-item--blue   { --c: var(--blue);   --on-c: var(--white); }
+.gallery-item--orange { --c: var(--orange); --on-c: var(--ink);   --c-edge: var(--orange-edge); }
+.gallery-item--yellow { --c: var(--yellow); --on-c: var(--ink);   --c-edge: var(--yellow-edge); }
+.gallery-item--blue   { --c: var(--blue);   --on-c: var(--white); --c-edge: var(--blue-edge); }
 .gallery-item:nth-child(odd)  { rotate: -1deg; }
 .gallery-item:nth-child(even) { rotate: 1deg; }
 .gallery-item:hover { translate: 0 -4px; rotate: 0deg; }
@@ -443,9 +448,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .gallery-name {
   position: absolute; left: 14px; bottom: 14px; max-width: calc(100% - 28px);
   font: 400 clamp(14px, 1.2vw, 17px)/1.15 var(--font-display);
-  background: var(--c); color: var(--on-c);
-  padding: 9px 14px;
-  border: 4px solid var(--white);
+  --k-bg: var(--c); --k-fg: var(--on-c); --k-edge: var(--c-edge); --k-depth: 5px;
+  padding: 11px 16px;
   border-radius: 12px;
 }
 
@@ -563,11 +567,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .step-done {
   position: absolute; top: -14px; left: 62%;
   font: 400 16px/1 var(--font-display);
-  background: var(--yellow); color: var(--ink);
-  padding: 8px 12px;
-  border: 4px solid var(--white); border-radius: var(--radius-pill);
-  box-shadow: 3px 3px 0 var(--ink);
-  rotate: 4deg;
+  --k-bg: var(--yellow); --k-edge: var(--yellow-edge); --k-depth: 5px;
+  padding: 11px 15px;
+  border-radius: var(--radius-pill);
   white-space: nowrap;
 }
 /* franja final: invita a dar el paso 1 */
@@ -590,26 +592,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* ─────────────────────────────────────────
    TESTIMONIALS
 ───────────────────────────────────────── */
-/* logotipo MAKERO (sin isotipo) en el título, inclinado como pegatina */
-.makero-wordmark {
-  display: inline-block;
-  vertical-align: -0.08em;
-  height: 0.95em;
-  rotate: -4deg;
-  filter: drop-shadow(3px 4px 0 var(--blue));
-}
-.makero-wordmark svg { height: 100%; width: auto; display: block; overflow: visible; }
-.makero-wordmark .mk-a, .makero-wordmark .mk-b { fill: var(--orange); }
+/* MAKERO en el título: misma letra, naranja con sombra azul, inclinado como pegatina */
+.title-sticker--makero { color: var(--orange); text-shadow: 3px 4px 0 var(--blue); rotate: -4deg; }
 
 .google-stars {
   display: inline-flex; align-items: center; gap: 8px;
   margin-top: 14px;
-  background: var(--white); color: var(--ink);
+  --k-bg: var(--white); --k-edge: var(--white-edge); --k-depth: 5px;
   font: 800 var(--text-sm)/1 var(--font-body);
-  padding: 8px 14px;
+  padding: 10px 16px;
   border-radius: var(--radius-pill);
-  box-shadow: 3px 4px 0 var(--orange);
-  rotate: -2deg;
 }
 .google-stars-icons { color: var(--google-star); letter-spacing: 1px; font-size: 1.15em; }
 
@@ -655,8 +647,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .testimonial-name  { font-size: var(--text-sm); font-weight: 800; }
 .testimonial-role  { font-size: var(--text-xs); color: var(--text-muted); }
 .testimonials-more { display: flex; justify-content: center; margin-top: clamp(36px, 4vw, 52px); }
-.testimonials-more .btn { background: var(--white); color: var(--ink); box-shadow: 0 0 0 0 transparent, var(--shadow-card); }
-.testimonials-more .btn:hover { background: var(--yellow); translate: -1px -2px; }
+.testimonials-more .btn { --k-bg: var(--white); --k-edge: var(--white-edge); --k-depth: 7px; }
+.testimonials-more .btn:hover { --k-bg: var(--yellow); --k-edge: var(--yellow-edge); translate: 0 -2px; box-shadow: 0 9px 0 var(--k-edge); }
+.testimonials-more .btn:active { translate: 0 5px; box-shadow: 0 2px 0 var(--k-edge); }
 
 /* ─────────────────────────────────────────
    ABOUT
@@ -808,11 +801,9 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-thicknes
 .ticket-stamp {
   position: absolute; top: -24px; right: -16px; z-index: 2;
   font: 400 15px/1 var(--font-display);
-  background: var(--yellow); color: var(--ink);
-  padding: 9px 15px;
-  border: 5px solid var(--white); border-radius: var(--radius-pill);
-  box-shadow: 3px 4px 0 var(--ink);
-  rotate: 8deg;
+  --k-bg: var(--yellow); --k-edge: var(--yellow-edge);
+  padding: 13px 19px;
+  border-radius: var(--radius-pill);
 }
 .contact-form .btn-primary { font: 400 clamp(15px, 1.25vw, 17px)/1 var(--font-display); min-height: 58px; }
 .form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
@@ -908,7 +899,7 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-thicknes
   .services-duo { grid-template-columns: minmax(0, 1fr); gap: 52px; }
   .testimonials-grid { grid-template-columns: minmax(0, 1fr); }
   .testimonial-card:nth-child(n+4) { display: none; }
-  .gallery-name { bottom: auto; top: 12px; left: 12px; font-size: 14px; padding: 7px 11px; }
+  .gallery-name { bottom: auto; top: 12px; left: 12px; font-size: 14px; padding: 9px 12px; }
   .gallery-img { object-position: var(--pos-m, var(--pos, center)); }
   .hero-content { grid-template-columns: minmax(0, 1fr); }
   .hero-3d-scene { max-width: clamp(260px, 78vw, 380px); }
@@ -952,7 +943,7 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-thicknes
   .step--4 .step-number { width: 88px; height: 88px; }
   .step-title { align-self: end; margin-bottom: 4px; }
   .step-desc { align-self: start; margin-inline: 0; max-width: none; }
-  .step-done { font-size: 13px; padding: 6px 9px; top: auto; bottom: -14px; left: -10px; rotate: -6deg; }
+  .step-done { font-size: 13px; padding: 8px 11px; top: auto; bottom: -14px; left: -10px; }
   .about-card { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .hero-cta .btn { width: 100%; }
 }

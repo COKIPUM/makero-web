@@ -1,5 +1,3 @@
-import wordmark from '../assets/makero-wordmark.svg?raw'
-
 // Opiniones reales de la ficha de Google de MAKERO (texto tal cual).
 const GOOGLE_REVIEWS = 'https://share.google/dqxcA3Y9fAHSUa4tS'
 
@@ -28,7 +26,7 @@ export default function Testimonials() {
         <div className="section-header">
           <h2 className="section-title testimonials-title">
             Lo que dicen de{' '}
-            <span className="makero-wordmark" dangerouslySetInnerHTML={{ __html: wordmark }} />
+            <span className="title-sticker title-sticker--makero">MAKERO</span>
           </h2>
           <div>
             <p className="section-subtitle">Opiniones reales de nuestros clientes en Google. Sus palabras, no las nuestras.</p>
