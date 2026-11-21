@@ -228,6 +228,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .section-header { grid-template-columns: max-content minmax(0, 1fr); }
   .section-title { white-space: nowrap; }
   .section-header .section-subtitle, .testimonials-intro { justify-self: end; }
+  /* Lo que dicen: título y frase juntos y centrados en la pantalla, sin hueco en medio */
+  #testimonials .section-header { grid-template-columns: max-content minmax(0, 440px); justify-content: center; column-gap: clamp(56px, 6vw, 96px); }
+  #testimonials .testimonials-intro { justify-self: start; }
 }
 .section-title, .about-title, .hero-title, .promo-discount, .stat-number, .about-stat-number {
   font-family: var(--font-display);
