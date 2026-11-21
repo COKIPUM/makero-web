@@ -25,7 +25,7 @@ export default function Testimonials() {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title testimonials-title">
-            Lo que dicen de{' '}
+            <span className="testimonials-title-text">Lo que <br className="testimonials-title-br" />dicen de</span>{' '}
             <span className="title-sticker title-sticker--makero">MAKERO</span>
           </h2>
           <div className="testimonials-intro">
