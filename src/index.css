@@ -607,10 +607,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 ───────────────────────────────────────── */
 /* MAKERO en el título: misma letra, naranja con sombra azul, inclinado como pegatina */
 .title-sticker--makero { color: var(--orange); text-shadow: 3px 4px 0 var(--blue); rotate: -4deg; }
-/* MAKERO a la derecha del texto y centrado en vertical, aunque el texto ocupe dos líneas */
-.testimonials-title { display: flex; align-items: center; column-gap: 0.32em; }
-.testimonials-title-text { flex: none; }
-.testimonials-title .title-sticker--makero { flex-shrink: 0; translate: 0 0; }
+/* «Lo que dicen de» arriba y MAKERO debajo, más grande */
+.testimonials-title { display: flex; flex-direction: column; align-items: flex-start; }
+.testimonials-title .title-sticker--makero { font-size: 1.45em; line-height: 1; margin-top: 0.08em; translate: 0 0; }
 
 .testimonials-intro { display: flex; flex-direction: column; }
 .google-stars {
@@ -923,8 +922,8 @@ a.contact-info-text:hover { text-decoration: underline; text-decoration-thicknes
      y la barra de color pasa a ser una raya corta encima de la frase. */
   .section-header { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; gap: 22px; margin-bottom: 40px; }
   .section-title .title-sticker { display: block; width: fit-content; margin: 6px auto 0; }
-  .testimonials-title { flex-direction: column; }
-  .testimonials-title-br { display: none; }
+  .testimonials-title { align-items: center; }
+  .testimonials-title .title-sticker--makero { font-size: 1.18em; margin-top: 6px; }
   .section-subtitle { font-size: 17px; border-left: 0; padding-left: 0; margin-inline: auto; }
   .section-subtitle::before { content: ""; display: block; width: 56px; height: 5px; border-radius: 3px; background: var(--bar, var(--yellow)); margin: 0 auto 14px; }
   .testimonials-intro { align-items: center; }
