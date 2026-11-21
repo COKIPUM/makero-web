@@ -28,7 +28,7 @@ export default function Testimonials() {
             Lo que dicen de{' '}
             <span className="title-sticker title-sticker--makero">MAKERO</span>
           </h2>
-          <div>
+          <div className="testimonials-intro">
             <p className="section-subtitle">Opiniones reales de nuestros clientes en Google. Sus palabras, no las nuestras.</p>
             <span className="google-stars">
               <GoogleG />

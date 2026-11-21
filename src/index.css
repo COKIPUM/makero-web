@@ -608,9 +608,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* MAKERO en el título: misma letra, naranja con sombra azul, inclinado como pegatina */
 .title-sticker--makero { color: var(--orange); text-shadow: 3px 4px 0 var(--blue); rotate: -4deg; translate: 0 0.14em; }
 
+.testimonials-intro { display: flex; flex-direction: column; }
 .google-stars {
   display: inline-flex; align-items: center; gap: 8px;
-  margin-top: 14px;
+  align-self: center;
+  margin-top: clamp(26px, 3vw, 32px);
   --k-bg: var(--white); --k-edge: var(--white-edge); --k-depth: 5px;
   font: 800 var(--text-sm)/1 var(--font-body);
   padding: 10px 16px;
