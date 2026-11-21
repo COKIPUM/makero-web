@@ -606,7 +606,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    TESTIMONIALS
 ───────────────────────────────────────── */
 /* MAKERO en el título: misma letra, naranja con sombra azul, inclinado como pegatina */
-.title-sticker--makero { color: var(--orange); text-shadow: 3px 4px 0 var(--blue); rotate: -4deg; translate: 0 0.14em; }
+.title-sticker--makero { color: var(--orange); text-shadow: 3px 4px 0 var(--blue); rotate: -4deg; }
 
 .testimonials-intro { display: flex; flex-direction: column; }
 .google-stars {
